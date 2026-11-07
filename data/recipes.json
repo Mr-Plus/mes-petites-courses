@@ -1,0 +1,1347 @@
+{
+  "$schema": "https://menu-nutrition.app/schemas/recipes-db-v1.json",
+  "description": "Base de données des plats de l'application Menu. Éditez ce fichier directement avant de glisser le dossier sur Netlify.",
+  "updatedAt": "2026-11-07",
+  "recipes": [
+    {
+      "id": "soupe-butternut",
+      "name": "Soupe butternut veloutée",
+      "category": "A",
+      "score": 92,
+      "proteinLevel": "Modéré (14g/pers.)",
+      "fatSugarNote": "Très riche en fibres & bêta-carotène • Gras très bas",
+      "nutritionHighlight": "Courge butternut entière, pommes de terre & touche de crème",
+      "rawDescription": "1 courge butternut (~1 kg) + 300 g de pommes de terre + 1 oignon + 10 cl de crème liquide (ou lait de coco) + 1 cube de bouillon de légumes",
+      "ingredients": [
+        {
+          "key": "courge-butternut",
+          "name": "Courge butternut",
+          "qty": 1,
+          "unit": "pièce (~1 kg)",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 courge butternut (~1 kg)"
+        },
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "300 g de pommes de terre"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 10,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "10 cl de crème liquide"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon de légumes"
+        }
+      ]
+    },
+    {
+      "id": "puree-parmentiere-chou-fleur",
+      "name": "Purée parmentière de chou-fleur",
+      "category": "A",
+      "score": 90,
+      "proteinLevel": "Élevé (34g/pers.)",
+      "fatSugarNote": "Gras faible • Sans sucres ajoutés",
+      "nutritionHighlight": "Légume majoritaire (800g) & bœuf haché",
+      "rawDescription": "1 chou-fleur cuit (~800 g) écrasé avec 5 cl de crème + 400 g de bœuf haché + 100 g de gruyère râpé",
+      "ingredients": [
+        {
+          "key": "chou-fleur",
+          "name": "Chou-fleur",
+          "qty": 1,
+          "unit": "pièce (~800 g)",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 chou-fleur cuit (~800 g)"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 5,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "5 cl de crème"
+        },
+        {
+          "key": "boeuf-hache",
+          "name": "Bœuf haché",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "400 g de bœuf haché"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "100 g de gruyère râpé"
+        }
+      ]
+    },
+    {
+      "id": "chili-con-carne-rapide",
+      "name": "Chili con carne rapide",
+      "category": "A",
+      "score": 88,
+      "proteinLevel": "Très élevé (42g/pers.)",
+      "fatSugarNote": "Riche en fibres • Gras très bas",
+      "nutritionHighlight": "Duo bœuf + haricots rouges & tomate",
+      "rawDescription": "500 g de bœuf haché + 1 grosse boîte de haricots rouges (500 g égouttés) + 400 g de coulis de tomate + 1 sachet d'épices à chili + 250 g de riz pour accompagner",
+      "ingredients": [
+        {
+          "key": "boeuf-hache",
+          "name": "Bœuf haché",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "500 g de bœuf haché"
+        },
+        {
+          "key": "haricots-rouges",
+          "name": "Haricots rouges (boîte égouttée)",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "1 grosse boîte (500 g égouttés)"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "400 g de coulis de tomate"
+        },
+        {
+          "key": "epices-chili",
+          "name": "Sachet d'épices à chili",
+          "qty": 1,
+          "unit": "sachet",
+          "aisle": "Épicerie Salée",
+          "detail": "1 sachet d'épices à chili"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "250 g de riz d'accompagnement"
+        }
+      ]
+    },
+    {
+      "id": "salade-carottes-rapees-complete",
+      "name": "Salade de carottes râpées complète",
+      "category": "A",
+      "score": 86,
+      "proteinLevel": "Bon (24g/pers.)",
+      "fatSugarNote": "Riche en fibres & bêta-carotène",
+      "nutritionHighlight": "600g de crudités + jambon & comté",
+      "rawDescription": "600 g de carottes crues râpées + 200 g de dés de jambon + 150 g de comté ou emmental en cubes + vinaigrette",
+      "ingredients": [
+        {
+          "key": "carottes-rapees",
+          "name": "Carottes",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "600 g de carottes crues râpées"
+        },
+        {
+          "key": "des-jambon",
+          "name": "Dés de jambon",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "200 g de dés de jambon"
+        },
+        {
+          "key": "comte-emmental-cubes",
+          "name": "Comté ou Emmental (en cubes)",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "150 g de comté ou emmental en cubes"
+        },
+        {
+          "key": "vinaigrette",
+          "name": "Vinaigrette",
+          "qty": 1,
+          "unit": "portion",
+          "aisle": "Épicerie Salée",
+          "detail": "Assaisonnement vinaigrette"
+        }
+      ]
+    },
+    {
+      "id": "petit-sale",
+      "name": "Petit salé aux lentilles",
+      "category": "A",
+      "score": 85,
+      "proteinLevel": "Très élevé (40g/pers.)",
+      "fatSugarNote": "Lentilles (IG très bas & fer) • Sans sucres",
+      "nutritionHighlight": "400g de lentilles vertes, carottes & porc demi-sel",
+      "rawDescription": "400 g de lentilles vertes + 600 g de porc demi-sel (palette/échine ou saucisses) + 300 g de carottes + 1 oignon",
+      "ingredients": [
+        {
+          "key": "lentilles-vertes",
+          "name": "Lentilles vertes",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "400 g de lentilles vertes"
+        },
+        {
+          "key": "porc-demi-sel",
+          "name": "Viande de porc demi-sel (petit salé)",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de porc demi-sel / saucisses"
+        },
+        {
+          "key": "carottes-rapees",
+          "name": "Carottes",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "300 g de carottes en rondelles"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        }
+      ]
+    },
+    {
+      "id": "tomates-courgettes-farcies",
+      "name": "Tomates et courgettes farcies",
+      "category": "A",
+      "score": 84,
+      "proteinLevel": "Élevé (28g/pers.)",
+      "fatSugarNote": "Glucides complexes (blé) • Légumes variés",
+      "nutritionHighlight": "8 légumes à farcir + blé Ebly",
+      "rawDescription": "4 grosses tomates à farcir + 4 courgettes rondes (ou 2 longues coupées en tronçons) + 400 g de chair à saucisse (ou bœuf haché) + 200 g de blé (type Ebly)",
+      "ingredients": [
+        {
+          "key": "tomates-farcir",
+          "name": "Grosses tomates à farcir",
+          "qty": 4,
+          "unit": "pièces",
+          "aisle": "Fruits & Légumes",
+          "detail": "4 grosses tomates à farcir"
+        },
+        {
+          "key": "courgettes",
+          "name": "Courgettes",
+          "qty": 4,
+          "unit": "pièces",
+          "aisle": "Fruits & Légumes",
+          "detail": "4 courgettes rondes (ou 2 longues)"
+        },
+        {
+          "key": "chair-saucisse-ou-boeuf",
+          "name": "Chair à saucisse (ou bœuf haché)",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "400 g de chair à saucisse (ou bœuf haché)"
+        },
+        {
+          "key": "ble-ebly",
+          "name": "Blé précuit (type Ebly)",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "200 g de blé (type Ebly)"
+        }
+      ]
+    },
+    {
+      "id": "curry-poulet-express",
+      "name": "Curry de poulet express",
+      "category": "A",
+      "score": 82,
+      "proteinLevel": "Très élevé (44g/pers.)",
+      "fatSugarNote": "Protéines maigres • IG bas (Basmati)",
+      "nutritionHighlight": "600g de filets de poulet & riz basmati",
+      "rawDescription": "600 g d'aiguillettes ou filets de poulet + 400 ml de lait de coco (1 brique/boîte) + 2 c. à soupe de pâte de curry doux + 300 g de riz basmati",
+      "ingredients": [
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g d'aiguillettes ou filets de poulet"
+        },
+        {
+          "key": "lait-coco",
+          "name": "Lait de coco",
+          "qty": 400,
+          "unit": "ml",
+          "aisle": "Épicerie Salée",
+          "detail": "400 ml de lait de coco (1 brique/boîte)"
+        },
+        {
+          "key": "pate-curry",
+          "name": "Pâte de curry doux",
+          "qty": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie Salée",
+          "detail": "2 c. à soupe de pâte de curry doux"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de riz basmati"
+        }
+      ]
+    },
+    {
+      "id": "riz-cantonais-maison",
+      "name": "Riz cantonais maison",
+      "category": "A",
+      "score": 80,
+      "proteinLevel": "Bon (26g/pers.)",
+      "fatSugarNote": "Peu de lipides • Protéines œufs + jambon",
+      "nutritionHighlight": "Petits pois, œufs battus & dés de jambon",
+      "rawDescription": "300 g de riz blanc cuit + 200 g de petits pois cuits + 200 g de dés de jambon + 3 à 4 œufs battus",
+      "ingredients": [
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de riz blanc"
+        },
+        {
+          "key": "petits-pois",
+          "name": "Petits pois cuits",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "200 g de petits pois cuits"
+        },
+        {
+          "key": "des-jambon",
+          "name": "Dés de jambon",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "200 g de dés de jambon"
+        },
+        {
+          "key": "oeufs",
+          "name": "Œufs",
+          "qty": 4,
+          "unit": "pièces",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "3 à 4 œufs battus"
+        }
+      ]
+    },
+    {
+      "id": "spaghetti-bolognaise",
+      "name": "Spaghetti bolognaise",
+      "category": "B",
+      "score": 76,
+      "proteinLevel": "Élevé (33g/pers.)",
+      "fatSugarNote": "Glucides énergétiques • Gras modéré",
+      "nutritionHighlight": "400g de bœuf haché & 500g de coulis",
+      "rawDescription": "400 g de spaghetti + 400 g de bœuf haché + 500 g de coulis de tomate + 1 oignon (optionnel) + parmesan",
+      "ingredients": [
+        {
+          "key": "spaghetti",
+          "name": "Spaghetti",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "400 g de spaghetti"
+        },
+        {
+          "key": "boeuf-hache",
+          "name": "Bœuf haché",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "400 g de bœuf haché"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "500 g de coulis de tomate"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon (optionnel)"
+        },
+        {
+          "key": "parmesan",
+          "name": "Parmesan râpé",
+          "qty": 50,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "Parmesan pour servir (~50 g)"
+        }
+      ]
+    },
+    {
+      "id": "tortilla-espagnole",
+      "name": "Tortilla espagnole",
+      "category": "B",
+      "score": 74,
+      "proteinLevel": "Élevé (29g/pers.)",
+      "fatSugarNote": "Riche en protéines d'œufs • Sans sucres",
+      "nutritionHighlight": "Œufs, pommes de terre cuites & jambon",
+      "rawDescription": "6 à 8 œufs + 500 g de pommes de terre cuites + 150 g de dés de jambon + 100 g de gruyère râpé",
+      "ingredients": [
+        {
+          "key": "oeufs",
+          "name": "Œufs",
+          "qty": 8,
+          "unit": "pièces",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "6 à 8 œufs"
+        },
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "500 g de pommes de terre cuites"
+        },
+        {
+          "key": "des-jambon",
+          "name": "Dés de jambon",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "150 g de dés de jambon"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "100 g de gruyère râpé"
+        }
+      ]
+    },
+    {
+      "id": "salade-chevre-chaud",
+      "name": "Salade de chèvre chaud",
+      "category": "B",
+      "score": 73,
+      "proteinLevel": "Bon (23g/pers.)",
+      "fatSugarNote": "Crudités abondantes • Chèvre sur toasts",
+      "nutritionHighlight": "Salade verte, toasts de chèvre chaud & lardons",
+      "rawDescription": "1 sachet de salade verte/mesclun (200 g) + 8 tranches de pain (toasts) + 1 bûche de chèvre (200 g) + 150 g de lardons + vinaigrette",
+      "ingredients": [
+        {
+          "key": "salade-verte",
+          "name": "Salade verte / mesclun",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 sachet de salade verte / mesclun (200 g)"
+        },
+        {
+          "key": "pain-toasts",
+          "name": "Pain de campagne (tranches pour toasts)",
+          "qty": 8,
+          "unit": "tranches",
+          "aisle": "Boulangerie & Pains",
+          "detail": "8 tranches de pain pour toasts"
+        },
+        {
+          "key": "buche-chevre",
+          "name": "Bûche de chèvre (200 g)",
+          "qty": 1,
+          "unit": "bûche (200 g)",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "1 bûche de chèvre (200 g)"
+        },
+        {
+          "key": "lardons",
+          "name": "Lardons",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "150 g de lardons"
+        },
+        {
+          "key": "vinaigrette",
+          "name": "Vinaigrette",
+          "qty": 1,
+          "unit": "portion",
+          "aisle": "Épicerie Salée",
+          "detail": "Vinaigrette (et filet de miel)"
+        }
+      ]
+    },
+    {
+      "id": "poelee-haricots-verts-lardons-boeuf",
+      "name": "Poêlée de haricots verts, lardons & bœuf",
+      "category": "B",
+      "score": 72,
+      "proteinLevel": "Très élevé (36g/pers.)",
+      "fatSugarNote": "Zéro sucres • Lipides des lardons",
+      "nutritionHighlight": "600g de haricots verts & 400g de bœuf",
+      "rawDescription": "600 g de haricots verts cuits + 400 g de bœuf haché + 150 g de lardons",
+      "ingredients": [
+        {
+          "key": "haricots-verts",
+          "name": "Haricots verts cuits",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "600 g de haricots verts cuits"
+        },
+        {
+          "key": "boeuf-hache",
+          "name": "Bœuf haché",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "400 g de bœuf haché"
+        },
+        {
+          "key": "lardons",
+          "name": "Lardons",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "150 g de lardons"
+        }
+      ]
+    },
+    {
+      "id": "hachis-parmentier",
+      "name": "Hachis parmentier",
+      "category": "B",
+      "score": 70,
+      "proteinLevel": "Élevé (34g/pers.)",
+      "fatSugarNote": "Plat complet • Fromage modéré (100g)",
+      "nutritionHighlight": "500g de bœuf haché & purée maison",
+      "rawDescription": "800 g de purée de pommes de terre (maison ou flocons) + 500 g de bœuf haché + 1 oignon + 100 g de gruyère râpé",
+      "ingredients": [
+        {
+          "key": "puree-pdt",
+          "name": "Purée de pommes de terre (maison ou flocons)",
+          "qty": 800,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "800 g de purée de pommes de terre"
+        },
+        {
+          "key": "boeuf-hache",
+          "name": "Bœuf haché",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "500 g de bœuf haché"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "100 g de gruyère râpé"
+        }
+      ]
+    },
+    {
+      "id": "gratin-chou-fleur",
+      "name": "Gratin de chou-fleur",
+      "category": "B",
+      "score": 68,
+      "proteinLevel": "Modéré (16g/pers.)",
+      "fatSugarNote": "Riche en fibres • Béchamel & gruyère",
+      "nutritionHighlight": "800g de chou-fleur gratiné",
+      "rawDescription": "1 gros chou-fleur (ou ~800 g de fleurettes) + 40 cl de béchamel + 150 g de gruyère râpé",
+      "ingredients": [
+        {
+          "key": "chou-fleur",
+          "name": "Chou-fleur",
+          "qty": 1,
+          "unit": "pièce (~800 g)",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 gros chou-fleur (~800 g de fleurettes)"
+        },
+        {
+          "key": "bechamel",
+          "name": "Béchamel",
+          "qty": 40,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "40 cl de béchamel"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "150 g de gruyère râpé"
+        }
+      ]
+    },
+    {
+      "id": "omelette-pdt-lardons",
+      "name": "Omelette pommes de terre & lardons",
+      "category": "C",
+      "score": 62,
+      "proteinLevel": "Élevé (28g/pers.)",
+      "fatSugarNote": "Riche en protéines • Lipides charcuterie",
+      "nutritionHighlight": "8 œufs, pommes de terre & lardons",
+      "rawDescription": "8 œufs + 4 à 5 pommes de terre cuites + 200 g de lardons + ciboulette ou persil",
+      "ingredients": [
+        {
+          "key": "oeufs",
+          "name": "Œufs",
+          "qty": 8,
+          "unit": "pièces",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "8 œufs"
+        },
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "4 à 5 pommes de terre cuites (~500 g)"
+        },
+        {
+          "key": "lardons",
+          "name": "Lardons",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "200 g de lardons"
+        },
+        {
+          "key": "herbes-fraiches",
+          "name": "Ciboulette ou persil",
+          "qty": 1,
+          "unit": "bouquet",
+          "aisle": "Fruits & Légumes",
+          "detail": "Ciboulette ou persil"
+        }
+      ]
+    },
+    {
+      "id": "gaufres-salees",
+      "name": "Gaufres salées jambon & fromage",
+      "category": "C",
+      "score": 60,
+      "proteinLevel": "Bon (25g/pers.)",
+      "fatSugarNote": "Pâte maison œufs/lait + garniture fromage",
+      "nutritionHighlight": "Gaufres maison garnies de jambon blanc & gruyère",
+      "rawDescription": "250 g de farine + 3 œufs + 40 cl de lait + 1 sachet de levure chimique + 4 tranches de jambon blanc + 150 g de gruyère râpé",
+      "ingredients": [
+        {
+          "key": "farine",
+          "name": "Farine de blé",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "250 g de farine"
+        },
+        {
+          "key": "oeufs",
+          "name": "Œufs",
+          "qty": 3,
+          "unit": "pièces",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "3 œufs"
+        },
+        {
+          "key": "lait",
+          "name": "Lait demi-écrémé",
+          "qty": 40,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "40 cl de lait"
+        },
+        {
+          "key": "levure-chimique",
+          "name": "Levure chimique",
+          "qty": 1,
+          "unit": "sachet",
+          "aisle": "Épicerie Salée",
+          "detail": "1 sachet de levure chimique"
+        },
+        {
+          "key": "jambon-blanc",
+          "name": "Tranches de jambon blanc",
+          "qty": 4,
+          "unit": "tranches",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "4 tranches de jambon blanc"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "150 g de gruyère râpé"
+        }
+      ]
+    },
+    {
+      "id": "tarte-fine-courgettes-chevre",
+      "name": "Tarte fine courgettes & chèvre",
+      "category": "C",
+      "score": 59,
+      "proteinLevel": "Modéré (17g/pers.)",
+      "fatSugarNote": "Légumes présents • Pâte feuilletée + chèvre",
+      "nutritionHighlight": "Courgettes, chèvre & huile d'olive",
+      "rawDescription": "1 grande pâte feuilletée + 2 courgettes moyennes + 1 bûche de chèvre (200 g) + 2 c. à soupe d'huile d'olive",
+      "ingredients": [
+        {
+          "key": "pate-feuilletee",
+          "name": "Grande pâte feuilletée",
+          "qty": 1,
+          "unit": "rouleau",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "1 grande pâte feuilletée"
+        },
+        {
+          "key": "courgettes",
+          "name": "Courgettes",
+          "qty": 2,
+          "unit": "pièces",
+          "aisle": "Fruits & Légumes",
+          "detail": "2 courgettes moyennes"
+        },
+        {
+          "key": "buche-chevre",
+          "name": "Bûche de chèvre (200 g)",
+          "qty": 1,
+          "unit": "bûche (200 g)",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "1 bûche de chèvre (200 g)"
+        },
+        {
+          "key": "huile-olive",
+          "name": "Huile d'olive",
+          "qty": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie Salée",
+          "detail": "2 c. à soupe d'huile d'olive"
+        }
+      ]
+    },
+    {
+      "id": "lasagnes-maison",
+      "name": "Lasagnes maison",
+      "category": "C",
+      "score": 57,
+      "proteinLevel": "Élevé (36g/pers.)",
+      "fatSugarNote": "Riche en bœuf & tomate • 50cl béchamel",
+      "nutritionHighlight": "Bœuf 500g, coulis 600g & béchamel",
+      "rawDescription": "1 paquet de feuilles de lasagne (~12 feuilles) + 500 g de bœuf haché + 600 g de coulis de tomate + 50 cl de béchamel + 80 g de parmesan",
+      "ingredients": [
+        {
+          "key": "feuilles-lasagne",
+          "name": "Feuilles de lasagne",
+          "qty": 1,
+          "unit": "paquet (~12 feuilles)",
+          "aisle": "Épicerie Salée",
+          "detail": "1 paquet de feuilles de lasagne (~12 feuilles)"
+        },
+        {
+          "key": "boeuf-hache",
+          "name": "Bœuf haché",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "500 g de bœuf haché"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "600 g de coulis de tomate"
+        },
+        {
+          "key": "bechamel",
+          "name": "Béchamel",
+          "qty": 50,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "50 cl de béchamel"
+        },
+        {
+          "key": "parmesan",
+          "name": "Parmesan râpé",
+          "qty": 80,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "80 g de parmesan"
+        }
+      ]
+    },
+    {
+      "id": "cordon-bleu-semoule",
+      "name": "Cordon bleu & semoule",
+      "category": "C",
+      "score": 56,
+      "proteinLevel": "Élevé (29g/pers.)",
+      "fatSugarNote": "Panure + fromage fondu • Féculent rapide",
+      "nutritionHighlight": "4 cordons bleus de volaille & semoule fine",
+      "rawDescription": "4 cordons bleus (400 g) + 300 g de semoule de blé (couscous moyen) + 20 g de beurre",
+      "ingredients": [
+        {
+          "key": "cordons-bleus",
+          "name": "Cordons bleus de volaille",
+          "qty": 4,
+          "unit": "pièces",
+          "aisle": "Boucherie & Volaille",
+          "detail": "4 cordons bleus (400 g)"
+        },
+        {
+          "key": "semoule-ble",
+          "name": "Semoule de blé",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de semoule de blé"
+        },
+        {
+          "key": "beurre",
+          "name": "Beurre",
+          "qty": 20,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "20 g de beurre pour la semoule"
+        }
+      ]
+    },
+    {
+      "id": "crepes-salees",
+      "name": "Crêpes salées (2 par pers.)",
+      "category": "C",
+      "score": 55,
+      "proteinLevel": "Élevé (31g/pers.)",
+      "fatSugarNote": "Sarrasin IG modéré • Riche en chorizo/chèvre",
+      "nutritionHighlight": "Galettes de sarrasin, œufs, jambon & chèvre",
+      "rawDescription": "8 galettes de sarrasin + 4 tranches de jambon blanc + 4 œufs + 150 g de chorizo en tranches + 1 bûche de chèvre (200 g)",
+      "ingredients": [
+        {
+          "key": "galettes-sarrasin",
+          "name": "Galettes de sarrasin",
+          "qty": 8,
+          "unit": "galettes",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "8 galettes de sarrasin"
+        },
+        {
+          "key": "jambon-blanc",
+          "name": "Tranches de jambon blanc",
+          "qty": 4,
+          "unit": "tranches",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "4 tranches de jambon blanc"
+        },
+        {
+          "key": "oeufs",
+          "name": "Œufs",
+          "qty": 4,
+          "unit": "pièces",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "4 œufs"
+        },
+        {
+          "key": "chorizo",
+          "name": "Chorizo en tranches",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "150 g de chorizo en tranches"
+        },
+        {
+          "key": "buche-chevre",
+          "name": "Bûche de chèvre (200 g)",
+          "qty": 1,
+          "unit": "bûche (200 g)",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "1 bûche de chèvre (200 g)"
+        }
+      ]
+    },
+    {
+      "id": "gratin-de-pates",
+      "name": "Gratin de pâtes au jambon",
+      "category": "C",
+      "score": 54,
+      "proteinLevel": "Bon (26g/pers.)",
+      "fatSugarNote": "Riche en féculents, béchamel & gruyère",
+      "nutritionHighlight": "Pâtes gratinées, dés de jambon & béchamel",
+      "rawDescription": "400 g de pâtes (macaroni/penne) + 200 g de dés de jambon + 40 cl de béchamel + 150 g de gruyère râpé",
+      "ingredients": [
+        {
+          "key": "pates-courtes",
+          "name": "Pâtes (macaroni ou penne)",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "400 g de pâtes (macaroni/penne)"
+        },
+        {
+          "key": "des-jambon",
+          "name": "Dés de jambon",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "200 g de dés de jambon"
+        },
+        {
+          "key": "bechamel",
+          "name": "Béchamel",
+          "qty": 40,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "40 cl de béchamel"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "150 g de gruyère râpé"
+        }
+      ]
+    },
+    {
+      "id": "pizza-maison",
+      "name": "Pizza maison (2 pizzas moyennes)",
+      "category": "C",
+      "score": 52,
+      "proteinLevel": "Élevé (29g/pers.)",
+      "fatSugarNote": "Double fromage (gruyère + chèvre) & pâte",
+      "nutritionHighlight": "Coulis de tomate, jambon & 2 fromages",
+      "rawDescription": "2 pâtes à pizza rondes + 300 g de coulis de tomate + 4 tranches de jambon blanc + 150 g de gruyère râpé + 1 bûche de chèvre (200 g)",
+      "ingredients": [
+        {
+          "key": "pate-pizza",
+          "name": "Pâtes à pizza rondes",
+          "qty": 2,
+          "unit": "rouleaux",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "2 pâtes à pizza rondes"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de coulis de tomate"
+        },
+        {
+          "key": "jambon-blanc",
+          "name": "Tranches de jambon blanc",
+          "qty": 4,
+          "unit": "tranches",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "4 tranches de jambon blanc"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "150 g de gruyère râpé"
+        },
+        {
+          "key": "buche-chevre",
+          "name": "Bûche de chèvre (200 g)",
+          "qty": 1,
+          "unit": "bûche (200 g)",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "1 bûche de chèvre (200 g)"
+        }
+      ]
+    },
+    {
+      "id": "quesadillas-jambon-fromage",
+      "name": "Quesadillas jambon & fromage (4 grandes)",
+      "category": "D",
+      "score": 46,
+      "proteinLevel": "Bon (25g/pers.)",
+      "fatSugarNote": "Riche en fromage (200g) • Sans légumes",
+      "nutritionHighlight": "Tortillas de blé, jambon & cheddar/emmental",
+      "rawDescription": "4 grandes tortillas de blé (ou 8 petites) + 4 tranches de jambon blanc + 200 g de cheddar ou emmental râpé",
+      "ingredients": [
+        {
+          "key": "tortillas-ble",
+          "name": "Grandes tortillas de blé",
+          "qty": 4,
+          "unit": "grandes (ou 8 petites)",
+          "aisle": "Épicerie Salée",
+          "detail": "4 grandes tortillas de blé (ou 8 petites)"
+        },
+        {
+          "key": "jambon-blanc",
+          "name": "Tranches de jambon blanc",
+          "qty": 4,
+          "unit": "tranches",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "4 tranches de jambon blanc"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "200 g de cheddar ou emmental râpé"
+        }
+      ]
+    },
+    {
+      "id": "pates-carbonara-simples",
+      "name": "Pâtes carbonara simples",
+      "category": "D",
+      "score": 44,
+      "proteinLevel": "Bon (24g/pers.)",
+      "fatSugarNote": "Glucides rapides + lipides lardons/parmesan",
+      "nutritionHighlight": "Tagliatelles, lardons, jaunes d'œufs & parmesan",
+      "rawDescription": "400 g de tagliatelles + 200 g de lardons + 4 jaunes d'œufs + 80 g de parmesan râpé",
+      "ingredients": [
+        {
+          "key": "tagliatelles",
+          "name": "Tagliatelles",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "400 g de tagliatelles"
+        },
+        {
+          "key": "lardons",
+          "name": "Lardons",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "200 g de lardons"
+        },
+        {
+          "key": "oeufs",
+          "name": "Œufs",
+          "qty": 4,
+          "unit": "pièces",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "4 jaunes d'œufs"
+        },
+        {
+          "key": "parmesan",
+          "name": "Parmesan râpé",
+          "qty": 80,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "80 g de parmesan râpé"
+        }
+      ]
+    },
+    {
+      "id": "croque-monsieur",
+      "name": "Croque-monsieur (2 par pers.)",
+      "category": "D",
+      "score": 40,
+      "proteinLevel": "Élevé (28g/pers.)",
+      "fatSugarNote": "Pain de mie (IG élevé) + double fromage",
+      "nutritionHighlight": "16 tranches pain de mie, jambon & fromages",
+      "rawDescription": "16 tranches de pain de mie + 8 tranches de fromage (emmental/gouda) + 4 à 8 tranches de jambon blanc + 100 g de fromage râpé (ou béchamel rapide)",
+      "ingredients": [
+        {
+          "key": "pain-de-mie",
+          "name": "Pain de mie",
+          "qty": 16,
+          "unit": "tranches",
+          "aisle": "Boulangerie & Pains",
+          "detail": "16 tranches de pain de mie"
+        },
+        {
+          "key": "fromage-tranches",
+          "name": "Fromage en tranches (emmental/gouda)",
+          "qty": 8,
+          "unit": "tranches",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "8 tranches de fromage (emmental/gouda)"
+        },
+        {
+          "key": "jambon-blanc",
+          "name": "Tranches de jambon blanc",
+          "qty": 6,
+          "unit": "tranches",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "4 à 8 tranches de jambon blanc (~6 tranches)"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "100 g de fromage râpé (ou béchamel rapide)"
+        }
+      ]
+    },
+    {
+      "id": "quiche-lorraine-express",
+      "name": "Quiche lorraine express",
+      "category": "D",
+      "score": 36,
+      "proteinLevel": "Modéré (21g/pers.)",
+      "fatSugarNote": "Riche en acides gras saturés (crème + lardons)",
+      "nutritionHighlight": "Pâte brisée, crème fraîche, lardons & gruyère",
+      "rawDescription": "1 pâte brisée + 4 œufs + 25 cl de crème fraîche + 200 g de lardons + 100 g de gruyère râpé",
+      "ingredients": [
+        {
+          "key": "pate-brisee",
+          "name": "Pâte brisée",
+          "qty": 1,
+          "unit": "rouleau",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "1 pâte brisée"
+        },
+        {
+          "key": "oeufs",
+          "name": "Œufs",
+          "qty": 4,
+          "unit": "pièces",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "4 œufs"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 25,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "25 cl de crème fraîche"
+        },
+        {
+          "key": "lardons",
+          "name": "Lardons",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "200 g de lardons"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "100 g de gruyère râpé"
+        }
+      ]
+    },
+    {
+      "id": "tartiflette",
+      "name": "Tartiflette savoyarde",
+      "category": "D",
+      "score": 34,
+      "proteinLevel": "Élevé (29g/pers.)",
+      "fatSugarNote": "Reblochon entier + lardons + crème",
+      "nutritionHighlight": "1 kg de pommes de terre, reblochon, lardons & oignons",
+      "rawDescription": "1 kg de pommes de terre + 1 reblochon entier (~450 g) + 200 g de lardons + 2 oignons + 10 cl de crème fraîche",
+      "ingredients": [
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 1000,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 kg de pommes de terre"
+        },
+        {
+          "key": "reblochon",
+          "name": "Reblochon entier",
+          "qty": 1,
+          "unit": "pièce (~450 g)",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "1 reblochon entier (~450 g)"
+        },
+        {
+          "key": "lardons",
+          "name": "Lardons",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "200 g de lardons"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 2,
+          "unit": "pièces",
+          "aisle": "Fruits & Légumes",
+          "detail": "2 oignons"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 10,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "10 cl de crème fraîche"
+        }
+      ]
+    },
+    {
+      "id": "gratin-dauphinois-express",
+      "name": "Gratin dauphinois express",
+      "category": "D",
+      "score": 32,
+      "proteinLevel": "Faible (11g/pers.)",
+      "fatSugarNote": "40cl crème entière + gruyère • Peu protéiné",
+      "nutritionHighlight": "1 kg de pommes de terre & crème liquide entière",
+      "rawDescription": "1 kg de pommes de terre + 40 cl de crème liquide entière + 1 gousse d'ail + muscade + 100 g de gruyère râpé",
+      "ingredients": [
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 1000,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 kg de pommes de terre"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 40,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "40 cl de crème liquide entière"
+        },
+        {
+          "key": "ail",
+          "name": "Gousse d'ail",
+          "qty": 1,
+          "unit": "gousse",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 gousse d'ail"
+        },
+        {
+          "key": "muscade",
+          "name": "Noix de muscade",
+          "qty": 1,
+          "unit": "pincée",
+          "aisle": "Épicerie Salée",
+          "detail": "Muscade râpée"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "100 g de gruyère râpé"
+        }
+      ]
+    },
+    {
+      "id": "raclette",
+      "name": "Raclette conviviale",
+      "category": "D",
+      "score": 30,
+      "proteinLevel": "Très élevé (42g/pers.)",
+      "fatSugarNote": "Très riche en graisses saturées & sel",
+      "nutritionHighlight": "800g de fromage à raclette, pommes de terre & charcuterie",
+      "rawDescription": "800 g de fromage à raclette + 1 kg de pommes de terre + 400 g de charcuterie variée + 1 bocal de cornichons",
+      "ingredients": [
+        {
+          "key": "fromage-raclette",
+          "name": "Fromage à raclette",
+          "qty": 800,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "800 g de fromage à raclette"
+        },
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 1000,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 kg de pommes de terre"
+        },
+        {
+          "key": "charcuterie-raclette",
+          "name": "Charcuterie variée pour raclette",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "400 g de charcuterie variée"
+        },
+        {
+          "key": "cornichons",
+          "name": "Cornichons",
+          "qty": 1,
+          "unit": "bocal",
+          "aisle": "Épicerie Salée",
+          "detail": "1 bocal de cornichons"
+        }
+      ]
+    }
+  ]
+}

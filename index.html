@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mes petites courses — Planificateur de Repas Équilibrés &amp; Liste de Courses</title>
+  <meta name="description" content="Sélectionnez vos plats de la semaine selon leur note nutritionnelle, suivez les recommandations d'équilibre et générez votre liste de courses.">
+  <meta name="theme-color" content="#DC2626">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Petites Courses">
+  <link rel="manifest" href="assets/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&amp;family=Rubik:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Polyfills conditionnels requis par modern-web-guidance -->
+  <script type="module">
+    if (!("popover" in HTMLElement.prototype)) {
+      import("https://unpkg.com/@oddbird/popover-polyfill@latest/dist/popover.min.js").catch(() => {});
+    }
+    if (!HTMLButtonElement.prototype.hasOwnProperty("interestForElement")) {
+      import("https://unpkg.com/interestfor@latest").catch(() => {});
+    }
+    if (!("anchorName" in document.documentElement.style)) {
+      import("https://unpkg.com/@oddbird/css-anchor-positioning").catch(() => {});
+    }
+    if (!("commandForElement" in HTMLButtonElement.prototype)) {
+      import("https://unpkg.com/invokers-polyfill@latest/invoker.min.js").catch(() => {});
+    }
+  </script>
+</head>
+<body>
+  <!-- En-tête -->
+  <header class="site-header no-print">
+    <div class="header-inner container">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-md">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+            <path d="M7 2v20"/>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-title">Mes petites courses</span>
+          <span class="brand-subtitle">Planificateur Nutrition &amp; Courses</span>
+        </div>
+      </div>
+
+      <nav class="header-actions" aria-label="Actions rapides">
+        <button type="button" id="btn-install-app" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" aria-hidden="true">
+            <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+            <path d="M12 18h.01"/>
+          </svg>
+          <span>Installer l'app</span>
+        </button>
+        <button type="button" id="btn-auto-suggest" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" aria-hidden="true">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+          </svg>
+          <span>Suggestion équilibrée</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content container no-print">
+    <!-- Section Hero & Configuration du nombre de jours/plats -->
+    <section class="hero-planner" aria-labelledby="main-heading">
+      <div class="hero-copy">
+        <h1 id="main-heading">Composez votre menu de la semaine avec équilibre</h1>
+
+        <!-- Sélecteur du nombre de plats (1 / 2 / 3+ jours) -->
+        <div class="days-selector-card">
+          <div class="days-selector-header">
+            <span class="days-label" id="days-group-label">Objectif de repas pour la semaine :</span>
+          </div>
+
+          <div class="days-controls" role="group" aria-labelledby="days-group-label">
+            <button type="button" class="day-preset-btn" data-days="1">1 jour</button>
+            <button type="button" class="day-preset-btn" data-days="2">2 jours</button>
+            <button type="button" class="day-preset-btn" data-days="3">3 jours</button>
+            <button type="button" class="day-preset-btn active" data-days="4">4 jours</button>
+            <button type="button" class="day-preset-btn" data-days="5">5 jours</button>
+            <button type="button" class="day-preset-btn" data-days="7">7 jours</button>
+            <div class="custom-days-stepper">
+              <button type="button" id="btn-days-minus" class="stepper-btn" aria-label="Diminuer le nombre de plats">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <span id="custom-days-value" class="stepper-value" aria-live="polite">4 plats</span>
+              <button type="button" id="btn-days-plus" class="stepper-btn" aria-label="Augmenter le nombre de plats">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte de recommandation nutritionnelle par catégorie -->
+      <div class="advisor-panel" aria-live="polite">
+        <div class="advisor-header">
+          <div>
+            <h2 class="advisor-title">Recommandation d'équilibre</h2>
+            <p class="advisor-subtitle" id="advisor-summary-text">
+              Pour 4 repas : max 1 plat Gourmand (D), max 1 plat Modéré (C), max 2 plats Bon Compromis (B), et les plats Équilibre (A) en illimité.
+            </p>
+          </div>
+          <label class="strict-toggle" for="strict-mode-checkbox">
+            <input type="checkbox" id="strict-mode-checkbox" checked>
+            <span>Respecter les quotas</span>
+          </label>
+        </div>
+
+        <div class="quota-grid" id="quota-cards-container">
+          <!-- Généré dynamiquement par app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalogue pleine largeur des plats classés par catégorie -->
+    <section class="catalog-section" aria-labelledby="catalog-heading">
+      <div class="catalog-toolbar">
+        <div class="catalog-title-group">
+          <h2 id="catalog-heading">Plats classés par Note Nutritionnelle (<span id="total-dishes-count">29</span>)</h2>
+          <p class="catalog-hint">Cliquez sur un plat pour l'ajouter ou le retirer de votre semaine.</p>
+        </div>
+
+        <search class="catalog-filters">
+          <div class="search-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm search-icon" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+            </svg>
+            <label for="dish-search" class="sr-only">Rechercher un plat ou un ingrédient</label>
+            <input type="search" id="dish-search" name="q" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Filtrer par plat ou ingrédient (ex: lentilles, raclette, butternut, bœuf)...">
+          </div>
+          <div class="category-filter-pills" role="group" aria-label="Filtrer par catégorie nutritionnelle">
+            <button type="button" class="filter-pill active" data-filter="ALL" id="filter-pill-all">Toutes les notes (29)</button>
+            <button type="button" class="filter-pill filter-pill-a" data-filter="A">Cat. A • Illimité</button>
+            <button type="button" class="filter-pill filter-pill-b" data-filter="B">Cat. B • Bon compromis</button>
+            <button type="button" class="filter-pill filter-pill-c" data-filter="C">Cat. C • Modéré</button>
+            <button type="button" class="filter-pill filter-pill-d" data-filter="D">Cat. D • Gourmand</button>
+          </div>
+        </search>
+      </div>
+
+      <!-- Conteneur des catégories de plats -->
+      <div id="dishes-categories-container" class="categories-stack">
+        <!-- Généré par app.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Barre d'action flottante en bas d'écran pour suivre la sélection et ouvrir la liste -->
+  <div class="bottom-checkout-bar no-print" role="region" aria-label="Suivi et validation du menu">
+    <div class="bottom-checkout-inner container">
+      <div class="bottom-checkout-info">
+        <span class="bottom-checkout-count" id="bottom-bar-count">4 / 4 plats</span>
+        <div class="bottom-quota-pills" id="bottom-bar-quotas" aria-label="Suivi des choix par catégorie">
+          <!-- Généré dynamiquement par app.js -->
+        </div>
+      </div>
+      <div class="bottom-checkout-actions">
+        <button type="button" id="btn-clear-selection" class="btn btn-outline">
+          Tout vider
+        </button>
+        <button type="button" id="btn-finish-menu" command="show-modal" commandfor="shopping-list-dialog" class="btn btn-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Terminer &amp; Voir la liste de courses</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup principale : Menu retenu + Liste des ingrédients + Boutons Impression/Export IA (conforme au guide `dialog`) -->
+  <dialog id="shopping-list-dialog" closedby="any" aria-labelledby="shopping-dialog-title">
+    <div class="dialog-content shopping-dialog-content">
+      <!-- En-tête de la popup (masqué à l'impression au profit de print-header) -->
+      <div class="dialog-header no-print">
+        <div>
+          <span class="dialog-eyebrow">Menu validé &amp; Panier</span>
+          <h2 id="shopping-dialog-title">Votre Liste de Courses de la Semaine</h2>
+          <p class="shopping-subtitle" id="shopping-status-subtitle"></p>
+        </div>
+        <form method="dialog">
+          <button value="cancel" class="btn-icon-close" aria-label="Fermer la liste de courses">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- En-tête visible uniquement à l'impression PDF -->
+      <div class="print-only print-header">
+        <h2 id="print-document-title">Liste de Courses de la Semaine</h2>
+        <p id="print-date-summary"></p>
+      </div>
+
+      <!-- Barre d'actions : Impression + bouton discret Export IA à côté -->
+      <div class="dialog-actions-bar no-print">
+        <div class="dialog-print-buttons">
+          <button type="button" id="btn-print-shopping" class="btn btn-primary" autofocus>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm" aria-hidden="true">
+              <polyline points="6 9 6 2 18 2 18 9"/>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+              <rect width="12" height="8" x="6" y="14"/>
+            </svg>
+            <span>Imprimer la Liste de Courses</span>
+          </button>
+
+          <button type="button" id="btn-print-menu" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm" aria-hidden="true">
+              <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+              <path d="M7 2v20"/>
+              <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
+            </svg>
+            <span>Imprimer le Menu</span>
+          </button>
+
+          <button type="button" id="btn-copy-ai-prompt" class="btn btn-ai-discreet" title="Copier les instructions d'auto-remplissage Drive par IA">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm" aria-hidden="true">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            </svg>
+            <span id="copy-prompt-label">Export IA</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Corps de la popup : Plats retenus (par catégorie, sans ingrédients) + Ingrédients par rayon -->
+      <div class="popup-shopping-grid">
+        <!-- Liste des plats retenus -->
+        <div class="selected-meals-box" id="printable-menu-section">
+          <div class="section-mini-header">
+            <div>
+              <h3>Plats de la semaine</h3>
+              <p class="tooltip-instruction no-print">Classés par note nutritionnelle (A à D).</p>
+            </div>
+            <span id="selected-meals-count" class="count-tag">0 plat</span>
+          </div>
+          <div id="selected-meals-list" class="selected-meals-list">
+            <!-- Généré par app.js -->
+          </div>
+        </div>
+
+        <!-- Liste des ingrédients agrégés avec info-bulle sur PC -->
+        <div class="ingredients-box" id="printable-shopping-section">
+          <div class="section-mini-header">
+            <div>
+              <h3>Ingrédients à ajouter au panier</h3>
+              <p class="tooltip-instruction no-print">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-xs" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+                </svg>
+                <span>Touchez ou survolez le badge <strong>Plats</strong> pour voir le détail par recette.</span>
+              </p>
+            </div>
+            <span id="ingredients-total-count" class="count-tag">0 article</span>
+          </div>
+
+          <div id="ingredients-list-container" class="ingredients-groups">
+            <!-- Généré par app.js -->
+          </div>
+        </div>
+      </div>
+
+      <div class="dialog-footer no-print">
+        <form method="dialog">
+          <button value="close" class="btn btn-outline">Continuer ma sélection</button>
+        </form>
+      </div>
+
+      <!-- Conteneur des popovers "hint" placé à l'intérieur du <dialog> pour ne pas être rendu inerte par showModal() -->
+      <div id="tooltips-portal" class="no-print"></div>
+    </div>
+  </dialog>
+
+  <!-- Modale d'aide à l'installation WebApp sur iOS & Android -->
+  <dialog id="pwa-install-dialog" closedby="any" aria-labelledby="pwa-dialog-title">
+    <div class="dialog-content pwa-dialog-content">
+      <div class="dialog-header">
+        <div>
+          <span class="dialog-eyebrow">Application Mobile (iOS &amp; Android)</span>
+          <h2 id="pwa-dialog-title">Installer Mes petites courses</h2>
+          <p class="shopping-subtitle">Accédez à votre liste de courses en plein écran, même hors-ligne au supermarché.</p>
+        </div>
+        <form method="dialog">
+          <button value="cancel" class="btn-icon-close" aria-label="Fermer la fenêtre d'installation" autofocus>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="pwa-platforms-grid">
+        <div class="pwa-platform-card">
+          <h3>Sur iPhone / iPad (Safari)</h3>
+          <ol class="pwa-steps-list">
+            <li>Touchez l'icône <strong>Partager</strong> (carré avec flèche vers le haut) dans la barre de Safari.</li>
+            <li>Faites défiler et choisissez <strong>« Sur l'écran d'accueil »</strong>.</li>
+            <li>Validez en touchant <strong>« Ajouter »</strong> en haut à droite.</li>
+          </ol>
+        </div>
+
+        <div class="pwa-platform-card">
+          <h3>Sur Android (Chrome)</h3>
+          <ol class="pwa-steps-list">
+            <li>Ouvrez le menu <strong>⋮</strong> en haut à droite de Chrome.</li>
+            <li>Appuyez sur <strong>« Installer l'application »</strong> ou <strong>« Ajouter à l'écran d'accueil »</strong>.</li>
+            <li>Confirmez l'installation pour retrouver l'icône parmi vos applications.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="dialog-footer">
+        <form method="dialog">
+          <button value="close" class="btn btn-primary">Compris</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Balise machine-readable directement lisible par les agents IA de navigation -->
+  <script id="ai-shopping-list-data" type="application/json">{}</script>
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
