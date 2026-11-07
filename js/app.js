@@ -593,6 +593,10 @@ function renderShoppingPopupContent() {
                         </svg>
                       </button>
                     </div>
+                    <div class="meal-expiry-row print-only">
+                      <span class="meal-expiry-label">À cuisiner avant le :</span>
+                      <span class="meal-expiry-slots">__ / __ / __</span>
+                    </div>
                     <ul class="selected-meal-ingredients print-only">
                       ${dish.ingredients.map((ing) => `<li>${ing.detail}</li>`).join("")}
                     </ul>

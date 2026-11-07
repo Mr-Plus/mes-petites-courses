@@ -1359,6 +1359,32 @@ dialog::backdrop {
     height: 18px !important;
   }
 
+  .meal-expiry-row {
+    display: flex !important;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.45rem !important;
+    padding: 0.3rem 0.5rem !important;
+    background: #F8F8F8 !important;
+    border: 1px dashed #666 !important;
+    border-radius: 6px !important;
+    font-size: 0.8rem !important;
+    color: #111 !important;
+  }
+
+  .meal-expiry-label {
+    font-weight: 700;
+  }
+
+  .meal-expiry-slots {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
+    color: #000;
+  }
+
   .selected-meal-ingredients {
     margin: 0.55rem 0 0 0 !important;
     padding-left: 1.25rem !important;
