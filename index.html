@@ -71,24 +71,16 @@
   </header>
 
   <main class="main-content container no-print">
-    <!-- Section Hero & Configuration du nombre de jours/plats -->
+    <!-- Section Hero & Configuration du nombre de plats -->
     <section class="hero-planner" aria-labelledby="main-heading">
       <div class="hero-copy">
         <h1 id="main-heading">Composez votre menu de la semaine avec équilibre</h1>
 
-        <!-- Sélecteur du nombre de plats (1 / 2 / 3+ jours) -->
+        <!-- Sélecteur du nombre de plats -->
         <div class="days-selector-card">
-          <div class="days-selector-header">
-            <span class="days-label" id="days-group-label">Objectif de repas pour la semaine :</span>
-          </div>
+          <span class="days-label" id="days-group-label">Nombre de plats pour la semaine :</span>
 
           <div class="days-controls" role="group" aria-labelledby="days-group-label">
-            <button type="button" class="day-preset-btn" data-days="1">1 jour</button>
-            <button type="button" class="day-preset-btn" data-days="2">2 jours</button>
-            <button type="button" class="day-preset-btn" data-days="3">3 jours</button>
-            <button type="button" class="day-preset-btn active" data-days="4">4 jours</button>
-            <button type="button" class="day-preset-btn" data-days="5">5 jours</button>
-            <button type="button" class="day-preset-btn" data-days="7">7 jours</button>
             <div class="custom-days-stepper">
               <button type="button" id="btn-days-minus" class="stepper-btn" aria-label="Diminuer le nombre de plats">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="icon-xs" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/></svg>
@@ -240,7 +232,10 @@
         <div class="selected-meals-box" id="printable-menu-section">
           <div class="section-mini-header">
             <div>
-              <h3>Plats de la semaine</h3>
+              <h3>
+                <span class="no-print">Plats de la semaine</span>
+                <span class="print-only">Plats de la semaine &amp; Ingrédients par recette</span>
+              </h3>
               <p class="tooltip-instruction no-print">Classés par note nutritionnelle (A à D).</p>
             </div>
             <span id="selected-meals-count" class="count-tag">0 plat</span>

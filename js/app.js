@@ -384,7 +384,7 @@ function renderAdvisorAndQuotas() {
   });
 
   dom.advisorSummaryText.textContent =
-    `Pour ${state.targetMeals} jour${state.targetMeals > 1 ? "s" : ""}, privilégiez les recettes Équilibre (A) à volonté et limitez progressivement les plats plus riches :`;
+    `Pour ${state.targetMeals} plat${state.targetMeals > 1 ? "s" : ""}, privilégiez les recettes Équilibre (A) à volonté et limitez progressivement les plats plus riches :`;
 
   const order = ["A", "B", "C", "D"];
   dom.quotaCardsContainer.innerHTML = order
@@ -551,7 +551,8 @@ function renderShoppingPopupContent() {
   const aggregated = aggregateIngredients();
   dom.shoppingStatusSubtitle.textContent = `${selectedDishes.length} repas sélectionnés • ${aggregated.length} ingrédients agrégés par rayon.`;
 
-  // Liste des plats retenus classés par catégorie nutritionnelle (A -> B -> C -> D), uniquement le listing sans les ingrédients
+  // Liste des plats retenus classés par catégorie nutritionnelle (A -> B -> C -> D)
+  // Sur écran : liste épurée par catégorie ; à l'impression PDF : cartes complètes avec case à cocher, badge catégorie et ingrédients détaillés
   dom.selectedMealsList.innerHTML = catOrder
     .map((catCode) => {
       const dishesOfCat = selectedDishes.filter((d) => d.category === catCode);
@@ -560,17 +561,27 @@ function renderShoppingPopupContent() {
 
       return `
         <div class="meal-category-group">
-          <h4 class="aisle-group-title meal-cat-group-title">
+          <h4 class="aisle-group-title meal-cat-group-title no-print">
             <span class="nutri-grade-circle nutri-grade-xs ${meta.badgeClass}" aria-hidden="true">${catCode}</span>
             <span>${meta.title}</span>
           </h4>
           <ul class="aisle-items-list">
             ${dishesOfCat
               .map((dish) => {
+                const isPrepared = state.preparedDishIds.has(dish.id);
                 return `
-                  <li class="selected-meal-item">
+                  <li class="selected-meal-item ${isPrepared ? "is-prepared" : ""}">
                     <div class="selected-meal-top">
-                      <span class="selected-meal-name">${dish.name}</span>
+                      <label class="meal-prepared-label">
+                        <input
+                          type="checkbox"
+                          class="meal-prepared-checkbox print-only"
+                          data-prepared-dish="${dish.id}"
+                          ${isPrepared ? "checked" : ""}
+                        >
+                        <span class="quota-cat-tag ${meta.quotaTagClass} print-only">${dish.category}</span>
+                        <span class="selected-meal-name">${dish.name}</span>
+                      </label>
                       <button
                         type="button"
                         class="btn-remove-meal no-print"
@@ -582,6 +593,9 @@ function renderShoppingPopupContent() {
                         </svg>
                       </button>
                     </div>
+                    <ul class="selected-meal-ingredients print-only">
+                      ${dish.ingredients.map((ing) => `<li>${ing.detail}</li>`).join("")}
+                    </ul>
                   </li>
                 `;
               })
@@ -892,11 +906,11 @@ function initEventListeners() {
     window.print();
   });
 
-  // Impression dissociée 2 : Menu de la semaine uniquement
+  // Impression dissociée 2 : Menu de la semaine & Fiches ingrédients
   dom.btnPrintMenu.addEventListener("click", () => {
     document.body.dataset.printMode = "menu";
     if (dom.printDocumentTitle) {
-      dom.printDocumentTitle.textContent = "Menu de la Semaine (par catégorie)";
+      dom.printDocumentTitle.textContent = "Menu de la Semaine & Fiches Ingrédients";
     }
     window.print();
   });

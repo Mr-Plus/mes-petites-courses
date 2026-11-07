@@ -109,15 +109,16 @@ p {
 }
 
 .header-inner {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: linear-gradient(135deg, var(--primary) 0%, #EA580C 100%);
+  border: 1px solid #B91C1C;
   border-radius: var(--radius-lg);
-  padding: 0.75rem 1.25rem;
+  padding: 0.85rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
+  color: #FFFFFF;
 }
 
 .brand {
@@ -130,7 +131,8 @@ p {
   width: 42px;
   height: 42px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--primary), #EA580C);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -142,14 +144,14 @@ p {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--text-primary);
+  color: #FFFFFF;
   letter-spacing: -0.02em;
 }
 
 .brand-subtitle {
   display: block;
   font-size: 0.8rem;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
 }
 
@@ -268,30 +270,17 @@ p {
   background-color: var(--bg-subtle);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 1rem;
-}
-
-.days-selector-header {
+  padding: 0.85rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .days-label {
   font-weight: 700;
-  font-size: 0.92rem;
-}
-
-.days-counter-badge {
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-strong);
-  color: var(--text-primary);
+  font-size: 0.95rem;
 }
 
 .days-controls {
@@ -301,43 +290,18 @@ p {
   align-items: center;
 }
 
-.day-preset-btn {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-strong);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.85rem;
-  padding: 0.45rem 0.75rem;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
-}
-
-.day-preset-btn:hover {
-  border-color: var(--primary);
-  background-color: var(--primary-soft);
-}
-
-.day-preset-btn.active {
-  background-color: var(--primary);
-  border-color: var(--primary);
-  color: #FFFFFF;
-}
-
 .custom-days-stepper {
   display: inline-flex;
   align-items: center;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
-  padding: 0.15rem;
-  margin-left: auto;
+  padding: 0.2rem;
 }
 
 .stepper-btn {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border: none;
   background: transparent;
   color: var(--text-primary);
@@ -354,9 +318,9 @@ p {
 
 .stepper-value {
   font-weight: 700;
-  font-size: 0.85rem;
-  padding: 0 0.6rem;
-  min-width: 64px;
+  font-size: 0.95rem;
+  padding: 0 0.75rem;
+  min-width: 72px;
   text-align: center;
 }
 
@@ -1374,15 +1338,37 @@ dialog::backdrop {
     gap: 1rem !important;
   }
 
+  .meal-category-group,
+  .meal-category-group > .aisle-items-list {
+    display: contents !important;
+  }
+
   .selected-meal-item {
     break-inside: avoid;
     border: 1.5px solid #222 !important;
+    border-radius: var(--radius-sm) !important;
     padding: 0.85rem !important;
+  }
+
+  .selected-meal-top .print-only {
+    display: inline-flex !important;
   }
 
   .meal-prepared-checkbox {
     width: 18px !important;
     height: 18px !important;
+  }
+
+  .selected-meal-ingredients {
+    margin: 0.55rem 0 0 0 !important;
+    padding-left: 1.25rem !important;
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+    color: #222 !important;
+  }
+
+  .selected-meal-ingredients li {
+    margin-bottom: 0.15rem;
   }
 
   .ingredients-groups {
@@ -1393,7 +1379,6 @@ dialog::backdrop {
     gap: 1rem !important;
   }
 
-  .meal-category-group,
   .aisle-group {
     break-inside: avoid;
   }
