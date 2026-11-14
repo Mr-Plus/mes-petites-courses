@@ -487,8 +487,6 @@ function renderCatalog() {
                       <span class="macro-chip">Protéines : ${dish.proteinLevel}</span>
                       <span class="macro-chip">${dish.fatSugarNote}</span>
                     </div>
-
-                    <p class="dish-ingredients-preview">${dish.rawDescription}</p>
                   </div>
 
                   <div class="dish-card-footer">
@@ -1023,21 +1021,39 @@ function initEventListeners() {
   let deferredInstallPrompt = null;
   const isStandalone =
     window.matchMedia("(display-mode: standalone)").matches ||
+    window.matchMedia("(display-mode: fullscreen)").matches ||
+    window.matchMedia("(display-mode: minimal-ui)").matches ||
     window.navigator.standalone === true;
 
-  if (isStandalone && dom.btnInstallApp) {
-    dom.btnInstallApp.hidden = true;
+  const removeInstallButton = () => {
+    if (dom.btnInstallApp) {
+      dom.btnInstallApp.remove();
+      dom.btnInstallApp = null;
+    }
+  };
+
+  if (isStandalone) {
+    removeInstallButton();
+  } else if (typeof navigator.getInstalledRelatedApps === "function") {
+    navigator
+      .getInstalledRelatedApps()
+      .then((apps) => {
+        if (Array.isArray(apps) && apps.length > 0) {
+          removeInstallButton();
+        }
+      })
+      .catch(() => {});
   }
 
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     deferredInstallPrompt = e;
-    if (dom.btnInstallApp) dom.btnInstallApp.hidden = false;
+    if (dom.btnInstallApp && !isStandalone) dom.btnInstallApp.hidden = false;
   });
 
   window.addEventListener("appinstalled", () => {
     deferredInstallPrompt = null;
-    if (dom.btnInstallApp) dom.btnInstallApp.hidden = true;
+    removeInstallButton();
   });
 
   if (dom.btnInstallApp) {

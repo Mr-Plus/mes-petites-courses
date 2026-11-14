@@ -1,7 +1,7 @@
 {
   "$schema": "https://menu-nutrition.app/schemas/recipes-db-v1.json",
   "description": "Base de données des plats de l'application Menu. Éditez ce fichier directement avant de glisser le dossier sur Netlify.",
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-14",
   "recipes": [
     {
       "id": "soupe-butternut",
@@ -379,7 +379,7 @@
       "proteinLevel": "Élevé (33g/pers.)",
       "fatSugarNote": "Glucides énergétiques • Gras modéré",
       "nutritionHighlight": "400g de bœuf haché & 500g de coulis",
-      "rawDescription": "400 g de spaghetti + 400 g de bœuf haché + 500 g de coulis de tomate + 1 oignon (optionnel) + parmesan",
+      "rawDescription": "400 g de spaghetti + 400 g de bœuf haché + 500 g de coulis de tomate + 1 oignon (optionnel) + 50 g de parmesan",
       "ingredients": [
         {
           "key": "spaghetti",
@@ -1062,8 +1062,8 @@
       "score": 44,
       "proteinLevel": "Bon (24g/pers.)",
       "fatSugarNote": "Glucides rapides + lipides lardons/parmesan",
-      "nutritionHighlight": "Tagliatelles, lardons, jaunes d'œufs & parmesan",
-      "rawDescription": "400 g de tagliatelles + 200 g de lardons + 4 jaunes d'œufs + 80 g de parmesan râpé",
+      "nutritionHighlight": "Tagliatelles, lardons, œufs & parmesan",
+      "rawDescription": "400 g de tagliatelles + 200 g de lardons + 4 œufs + 80 g de parmesan râpé",
       "ingredients": [
         {
           "key": "tagliatelles",
@@ -1087,7 +1087,7 @@
           "qty": 4,
           "unit": "pièces",
           "aisle": "Crèmerie & Fromages",
-          "detail": "4 jaunes d'œufs"
+          "detail": "4 œufs"
         },
         {
           "key": "parmesan",
@@ -1340,6 +1340,1826 @@
           "unit": "bocal",
           "aisle": "Épicerie Salée",
           "detail": "1 bocal de cornichons"
+        }
+      ]
+    },
+    {
+      "id": "escalopes-dinde-panees-riz-tomate",
+      "name": "Escalopes de dinde panées & riz à la tomate",
+      "category": "B",
+      "score": 76,
+      "proteinLevel": "Très élevé (40g/pers.)",
+      "fatSugarNote": "Protéines maigres • Glucides & lycopène",
+      "nutritionHighlight": "4 escalopes de dinde panées & riz cuisiné à la tomate",
+      "rawDescription": "4 escalopes de dinde (~500 g) + 2 œufs + 100 g de chapelure + 300 g de riz basmati + 400 g de coulis de tomate + 1 oignon",
+      "ingredients": [
+        {
+          "key": "escalopes-dinde",
+          "name": "Escalopes de dinde",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "4 escalopes de dinde (~500 g)"
+        },
+        {
+          "key": "oeufs",
+          "name": "Œufs",
+          "qty": 2,
+          "unit": "pièces",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "2 œufs pour la panure"
+        },
+        {
+          "key": "chapelure",
+          "name": "Chapelure",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "100 g de chapelure"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de riz basmati"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "400 g de coulis de tomate"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        }
+      ]
+    },
+    {
+      "id": "fajitas-poulet-haricots-rouges",
+      "name": "Fajitas de poulet, oignons & haricots rouges",
+      "category": "A",
+      "score": 82,
+      "proteinLevel": "Très élevé (43g/pers.)",
+      "fatSugarNote": "Protéines maigres & fibres • Fromage modéré",
+      "nutritionHighlight": "500g de poulet, haricots rouges & tortillas de blé",
+      "rawDescription": "500 g de filets de poulet + 1 boîte de haricots rouges (250 g égouttés) + 2 oignons + 4 grandes tortillas de blé (ou 8 petites) + 1 sachet d'épices à fajitas + 100 g de gruyère râpé",
+      "ingredients": [
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "500 g de filets de poulet"
+        },
+        {
+          "key": "haricots-rouges",
+          "name": "Haricots rouges (boîte égouttée)",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "1 boîte de haricots rouges (250 g égouttés)"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 2,
+          "unit": "pièces",
+          "aisle": "Fruits & Légumes",
+          "detail": "2 oignons émincés"
+        },
+        {
+          "key": "tortillas-ble",
+          "name": "Grandes tortillas de blé",
+          "qty": 4,
+          "unit": "grandes (ou 8 petites)",
+          "aisle": "Épicerie Salée",
+          "detail": "4 grandes tortillas de blé (ou 8 petites)"
+        },
+        {
+          "key": "epices-fajitas",
+          "name": "Sachet d'épices à fajitas",
+          "qty": 1,
+          "unit": "sachet",
+          "aisle": "Épicerie Salée",
+          "detail": "1 sachet d'épices à fajitas"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "100 g de fromage râpé"
+        }
+      ]
+    },
+    {
+      "id": "gratin-pates-poulet-brocolis",
+      "name": "Gratin de pâtes au poulet & brocolis",
+      "category": "B",
+      "score": 73,
+      "proteinLevel": "Très élevé (37g/pers.)",
+      "fatSugarNote": "Plat complet avec légumes verts • Crème légère",
+      "nutritionHighlight": "Pâtes gratinées, 400g de poulet & 400g de brocolis",
+      "rawDescription": "350 g de pâtes courtes + 400 g de filets de poulet + 400 g de fleurettes de brocolis + 20 cl de crème liquide + 120 g de gruyère râpé",
+      "ingredients": [
+        {
+          "key": "pates-courtes",
+          "name": "Pâtes (macaroni ou penne)",
+          "qty": 350,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "350 g de pâtes courtes"
+        },
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "400 g de filets de poulet en dés"
+        },
+        {
+          "key": "brocolis",
+          "name": "Brocolis",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "400 g de fleurettes de brocolis"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 20,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "20 cl de crème liquide"
+        },
+        {
+          "key": "gruyere-rape",
+          "name": "Gruyère / Emmental râpé",
+          "qty": 120,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "120 g de gruyère râpé"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-saute-porc-caramel",
+      "name": "Sauté de porc au caramel & riz (Cookeo)",
+      "category": "B",
+      "score": 71,
+      "proteinLevel": "Très élevé (38g/pers.)",
+      "fatSugarNote": "Sucres ajoutés modérés (caramel) • Protéines élevées",
+      "nutritionHighlight": "600g de sauté de porc fondant & riz basmati",
+      "rawDescription": "600 g de sauté de porc + 1 oignon + 3 c. à soupe de sauce soja + 2 c. à soupe de sucre (ou miel) + 300 g de riz basmati",
+      "ingredients": [
+        {
+          "key": "saute-porc",
+          "name": "Sauté de porc",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de sauté de porc en cubes"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "sauce-soja",
+          "name": "Sauce soja",
+          "qty": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie Salée",
+          "detail": "3 c. à soupe de sauce soja"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de riz basmati"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-poulet-basquaise-sans-poivron",
+      "name": "Poulet basquaise tomates & olives (Cookeo)",
+      "category": "A",
+      "score": 84,
+      "proteinLevel": "Très élevé (41g/pers.)",
+      "fatSugarNote": "Volaille maigre • Sauce tomate légère",
+      "nutritionHighlight": "600g de poulet mijoté aux tomates & olives",
+      "rawDescription": "600 g de filets ou hauts de cuisse de poulet + 500 g de coulis de tomate + 100 g d'olives vertes + 1 oignon + 300 g de riz",
+      "ingredients": [
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de filets ou hauts de cuisse de poulet"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "500 g de coulis de tomate"
+        },
+        {
+          "key": "olives-vertes",
+          "name": "Olives vertes dénoyautées",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "100 g d'olives vertes"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de riz d'accompagnement"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-blanquette-dinde-express",
+      "name": "Blanquette de dinde aux carottes (Cookeo)",
+      "category": "A",
+      "score": 83,
+      "proteinLevel": "Très élevé (42g/pers.)",
+      "fatSugarNote": "Viande blanche très maigre • Sauce liée légère",
+      "nutritionHighlight": "600g de sauté de dinde, 400g de carottes & riz",
+      "rawDescription": "600 g de sauté de dinde + 400 g de carottes + 1 oignon + 15 cl de crème liquide + 1 cube de bouillon + 250 g de riz",
+      "ingredients": [
+        {
+          "key": "saute-dinde",
+          "name": "Sauté ou filets de dinde",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de sauté de dinde"
+        },
+        {
+          "key": "carottes",
+          "name": "Carottes",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "400 g de carottes en rondelles"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 15,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "15 cl de crème liquide"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "250 g de riz"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-risotto-petits-pois-jambon",
+      "name": "Risotto petits pois & jambon (Cookeo)",
+      "category": "B",
+      "score": 77,
+      "proteinLevel": "Bon (25g/pers.)",
+      "fatSugarNote": "Fibres des petits pois • Parmesan modéré",
+      "nutritionHighlight": "Riz arborio, 250g de petits pois & dés de jambon",
+      "rawDescription": "320 g de riz à risotto (arborio) + 250 g de petits pois + 200 g de dés de jambon + 1 oignon + 1 cube de bouillon + 60 g de parmesan râpé",
+      "ingredients": [
+        {
+          "key": "riz-arborio",
+          "name": "Riz à risotto (arborio)",
+          "qty": 320,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "320 g de riz à risotto"
+        },
+        {
+          "key": "petits-pois",
+          "name": "Petits pois cuits",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "250 g de petits pois (surgelés ou boîte)"
+        },
+        {
+          "key": "des-jambon",
+          "name": "Dés de jambon",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "200 g de dés de jambon"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        },
+        {
+          "key": "parmesan",
+          "name": "Parmesan râpé",
+          "qty": 60,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "60 g de parmesan râpé"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-one-pot-pasta-poulet-creme",
+      "name": "Pâtes one-pot poulet, crème & parmesan (Cookeo)",
+      "category": "B",
+      "score": 74,
+      "proteinLevel": "Très élevé (39g/pers.)",
+      "fatSugarNote": "Tout-en-un rapide • Protéines élevées",
+      "nutritionHighlight": "400g de poulet, penne, crème & parmesan",
+      "rawDescription": "350 g de penne + 400 g de filets de poulet + 20 cl de crème liquide + 1 cube de bouillon + 60 g de parmesan râpé",
+      "ingredients": [
+        {
+          "key": "pates-courtes",
+          "name": "Pâtes (macaroni ou penne)",
+          "qty": 350,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "350 g de penne"
+        },
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "400 g de filets de poulet en dés"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 20,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "20 cl de crème liquide"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        },
+        {
+          "key": "parmesan",
+          "name": "Parmesan râpé",
+          "qty": 60,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "60 g de parmesan râpé"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-boeuf-bourguignon-carottes",
+      "name": "Bourguignon de bœuf aux carottes (Cookeo)",
+      "category": "A",
+      "score": 81,
+      "proteinLevel": "Très élevé (41g/pers.)",
+      "fatSugarNote": "Mijoté riche en fer & fibres • Gras modéré",
+      "nutritionHighlight": "600g de bœuf à braiser & 500g de carottes",
+      "rawDescription": "600 g de bœuf à braiser (paleron/macreuse) + 500 g de carottes + 100 g de lardons + 1 oignon + 1 cube de bouillon",
+      "ingredients": [
+        {
+          "key": "boeuf-braiser",
+          "name": "Bœuf à braiser (bourguignon)",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de bœuf à braiser"
+        },
+        {
+          "key": "carottes",
+          "name": "Carottes",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "500 g de carottes en rondelles"
+        },
+        {
+          "key": "lardons",
+          "name": "Lardons",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "100 g de lardons"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-rougail-saucisses",
+      "name": "Rougail saucisses express & riz (Cookeo)",
+      "category": "C",
+      "score": 61,
+      "proteinLevel": "Élevé (30g/pers.)",
+      "fatSugarNote": "Saucisses fumées riches en lipides • Sauce tomate",
+      "nutritionHighlight": "4 saucisses fumées, concassé de tomates & riz",
+      "rawDescription": "4 saucisses fumées (ou de Montbéliard, ~500 g) + 400 g de tomates concassées en boîte + 2 oignons + 1 gousse d'ail + 300 g de riz",
+      "ingredients": [
+        {
+          "key": "saucisses-fumees",
+          "name": "Saucisses fumées",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "4 saucisses fumées (~500 g)"
+        },
+        {
+          "key": "tomates-concassees",
+          "name": "Tomates concassées (boîte)",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "1 boîte de tomates concassées (400 g)"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 2,
+          "unit": "pièces",
+          "aisle": "Fruits & Légumes",
+          "detail": "2 oignons"
+        },
+        {
+          "key": "ail",
+          "name": "Gousse d'ail",
+          "qty": 1,
+          "unit": "gousse",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 gousse d'ail"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de riz blanc"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-poulet-moutarde-grenailles",
+      "name": "Poulet à la moutarde & grenailles (Cookeo)",
+      "category": "A",
+      "score": 82,
+      "proteinLevel": "Très élevé (41g/pers.)",
+      "fatSugarNote": "Protéines maigres • Pommes de terre vapeur",
+      "nutritionHighlight": "600g de poulet, 700g de grenailles & sauce moutarde",
+      "rawDescription": "600 g de filets de poulet + 700 g de pommes de terre grenailles + 2 c. à soupe de moutarde à l'ancienne + 15 cl de crème liquide + 1 oignon",
+      "ingredients": [
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de filets de poulet"
+        },
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 700,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "700 g de pommes de terre grenailles"
+        },
+        {
+          "key": "moutarde",
+          "name": "Moutarde à l'ancienne",
+          "qty": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie Salée",
+          "detail": "2 c. à soupe de moutarde à l'ancienne"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 15,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "15 cl de crème liquide"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-chili-sin-carne",
+      "name": "Chili sin carne haricots & maïs (Cookeo)",
+      "category": "A",
+      "score": 89,
+      "proteinLevel": "Bon (22g/pers.)",
+      "fatSugarNote": "Très riche en fibres végétales • Gras quasi nul",
+      "nutritionHighlight": "Haricots rouges, maïs, coulis de tomate & riz",
+      "rawDescription": "1 grosse boîte de haricots rouges (500 g égouttés) + 1 boîte de maïs (250 g) + 400 g de coulis de tomate + 1 sachet d'épices à chili + 250 g de riz",
+      "ingredients": [
+        {
+          "key": "haricots-rouges",
+          "name": "Haricots rouges (boîte égouttée)",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "1 grosse boîte (500 g égouttés)"
+        },
+        {
+          "key": "mais",
+          "name": "Maïs en boîte",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "1 boîte de maïs (250 g)"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "400 g de coulis de tomate"
+        },
+        {
+          "key": "epices-chili",
+          "name": "Sachet d'épices à chili",
+          "qty": 1,
+          "unit": "sachet",
+          "aisle": "Épicerie Salée",
+          "detail": "1 sachet d'épices à chili"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "250 g de riz d'accompagnement"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-curry-pois-chiches-epinards",
+      "name": "Curry pois chiches & épinards (Cookeo)",
+      "category": "A",
+      "score": 90,
+      "proteinLevel": "Bon (23g/pers.)",
+      "fatSugarNote": "100% végétal • Fibres, fer & bêta-carotène",
+      "nutritionHighlight": "500g de pois chiches, épinards, lait de coco & riz",
+      "rawDescription": "1 grosse boîte de pois chiches (500 g égouttés) + 300 g d'épinards frais (ou surgelés) + 400 ml de lait de coco + 2 c. à soupe de pâte de curry doux + 250 g de riz basmati",
+      "ingredients": [
+        {
+          "key": "pois-chiches",
+          "name": "Pois chiches (boîte égouttée)",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "1 grosse boîte (500 g égouttés)"
+        },
+        {
+          "key": "epinards",
+          "name": "Épinards frais ou surgelés",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "300 g d'épinards"
+        },
+        {
+          "key": "lait-coco",
+          "name": "Lait de coco",
+          "qty": 400,
+          "unit": "ml",
+          "aisle": "Épicerie Salée",
+          "detail": "400 ml de lait de coco"
+        },
+        {
+          "key": "pate-curry",
+          "name": "Pâte de curry doux",
+          "qty": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie Salée",
+          "detail": "2 c. à soupe de pâte de curry doux"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "250 g de riz basmati"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-one-pot-bolognaise-lentilles-corail",
+      "name": "Pâtes one-pot bolognaise lentilles corail (Cookeo)",
+      "category": "A",
+      "score": 87,
+      "proteinLevel": "Bon (25g/pers.)",
+      "fatSugarNote": "Protéines végétales & fibres • Gras très bas",
+      "nutritionHighlight": "200g de lentilles corail, pâtes & coulis de tomate",
+      "rawDescription": "300 g de pâtes courtes + 200 g de lentilles corail + 500 g de coulis de tomate + 1 oignon + 1 cube de bouillon + 50 g de parmesan râpé",
+      "ingredients": [
+        {
+          "key": "pates-courtes",
+          "name": "Pâtes (macaroni ou penne)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de pâtes courtes"
+        },
+        {
+          "key": "lentilles-corail",
+          "name": "Lentilles corail",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "200 g de lentilles corail"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "500 g de coulis de tomate"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        },
+        {
+          "key": "parmesan",
+          "name": "Parmesan râpé",
+          "qty": 50,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "50 g de parmesan râpé"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-saute-dinde-curry-legumes",
+      "name": "Sauté de dinde au curry & carottes (Cookeo)",
+      "category": "A",
+      "score": 85,
+      "proteinLevel": "Très élevé (42g/pers.)",
+      "fatSugarNote": "Viande très maigre + légumes fondants",
+      "nutritionHighlight": "600g de dinde, 400g de carottes & 400g de pommes de terre",
+      "rawDescription": "600 g de sauté de dinde + 400 g de carottes + 400 g de pommes de terre + 20 cl de lait de coco (ou crème) + 2 c. à soupe de pâte de curry doux",
+      "ingredients": [
+        {
+          "key": "saute-dinde",
+          "name": "Sauté ou filets de dinde",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de sauté de dinde"
+        },
+        {
+          "key": "carottes",
+          "name": "Carottes",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "400 g de carottes en rondelles"
+        },
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "400 g de pommes de terre en cubes"
+        },
+        {
+          "key": "lait-coco",
+          "name": "Lait de coco",
+          "qty": 200,
+          "unit": "ml",
+          "aisle": "Épicerie Salée",
+          "detail": "200 ml de lait de coco"
+        },
+        {
+          "key": "pate-curry",
+          "name": "Pâte de curry doux",
+          "qty": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie Salée",
+          "detail": "2 c. à soupe de pâte de curry doux"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-one-pot-boulettes-boeuf-penne",
+      "name": "Boulettes de bœuf sauce tomate & penne (Cookeo)",
+      "category": "B",
+      "score": 76,
+      "proteinLevel": "Élevé (35g/pers.)",
+      "fatSugarNote": "Plat complet tout-en-un • Gras modéré",
+      "nutritionHighlight": "450g de boulettes de bœuf, coulis de tomate & penne",
+      "rawDescription": "450 g de boulettes de bœuf + 350 g de penne + 500 g de coulis de tomate + 1 oignon + 1 cube de bouillon + 50 g de parmesan râpé",
+      "ingredients": [
+        {
+          "key": "boulettes-boeuf",
+          "name": "Boulettes de bœuf",
+          "qty": 450,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "450 g de boulettes de bœuf"
+        },
+        {
+          "key": "pates-courtes",
+          "name": "Pâtes (macaroni ou penne)",
+          "qty": 350,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "350 g de penne"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "500 g de coulis de tomate"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        },
+        {
+          "key": "parmesan",
+          "name": "Parmesan râpé",
+          "qty": 50,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "50 g de parmesan râpé"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-colombo-poulet-express",
+      "name": "Colombo de poulet pommes de terre & carottes (Cookeo)",
+      "category": "A",
+      "score": 86,
+      "proteinLevel": "Très élevé (41g/pers.)",
+      "fatSugarNote": "Volaille maigre + duo de légumes • Très peu gras",
+      "nutritionHighlight": "600g de poulet, carottes, pommes de terre & épices colombo",
+      "rawDescription": "600 g de filets ou hauts de cuisse de poulet + 400 g de pommes de terre + 400 g de carottes + 1 oignon + 2 c. à soupe d'épices colombo + 1 cube de bouillon",
+      "ingredients": [
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de poulet en morceaux"
+        },
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "400 g de pommes de terre en cubes"
+        },
+        {
+          "key": "carottes",
+          "name": "Carottes",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "400 g de carottes en rondelles"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "epices-colombo",
+          "name": "Épices colombo",
+          "qty": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie Salée",
+          "detail": "2 c. à soupe d'épices colombo"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-gnocchis-jambon-petits-pois",
+      "name": "Gnocchis jambon, petits pois & crème (Cookeo)",
+      "category": "B",
+      "score": 70,
+      "proteinLevel": "Bon (24g/pers.)",
+      "fatSugarNote": "Express 5 min • Fibres des petits pois",
+      "nutritionHighlight": "600g de gnocchis, 200g de petits pois & dés de jambon",
+      "rawDescription": "600 g de gnocchis à poêler + 200 g de dés de jambon + 200 g de petits pois + 15 cl de crème liquide + 60 g de parmesan râpé",
+      "ingredients": [
+        {
+          "key": "gnocchis",
+          "name": "Gnocchis frais",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "600 g de gnocchis"
+        },
+        {
+          "key": "des-jambon",
+          "name": "Dés de jambon",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "200 g de dés de jambon"
+        },
+        {
+          "key": "petits-pois",
+          "name": "Petits pois cuits",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "200 g de petits pois"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 15,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "15 cl de crème liquide"
+        },
+        {
+          "key": "parmesan",
+          "name": "Parmesan râpé",
+          "qty": 60,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "60 g de parmesan râpé"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-ebly-risotto-poulet-parmesan",
+      "name": "Ebly façon risotto au poulet & parmesan (Cookeo)",
+      "category": "A",
+      "score": 80,
+      "proteinLevel": "Très élevé (41g/pers.)",
+      "fatSugarNote": "Blé complet (fibres) + poulet maigre",
+      "nutritionHighlight": "300g de blé Ebly, 500g de poulet & parmesan",
+      "rawDescription": "300 g de blé précuit (type Ebly) + 500 g de filets de poulet + 1 oignon + 10 cl de crème liquide + 1 cube de bouillon + 60 g de parmesan râpé",
+      "ingredients": [
+        {
+          "key": "ble-ebly",
+          "name": "Blé précuit (type Ebly)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de blé (type Ebly)"
+        },
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "500 g de filets de poulet en dés"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 10,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "10 cl de crème liquide"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        },
+        {
+          "key": "parmesan",
+          "name": "Parmesan râpé",
+          "qty": 60,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "60 g de parmesan râpé"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-tajine-poulet-olives-carottes",
+      "name": "Tajine de poulet aux olives & carottes (Cookeo)",
+      "category": "A",
+      "score": 85,
+      "proteinLevel": "Très élevé (41g/pers.)",
+      "fatSugarNote": "Volaille maigre & légumes • Glucides complexes",
+      "nutritionHighlight": "600g de poulet, 400g de carottes, olives & semoule",
+      "rawDescription": "600 g de filets ou hauts de cuisse de poulet + 400 g de carottes + 100 g d'olives vertes + 1 oignon + 1 cube de bouillon + 250 g de semoule de blé",
+      "ingredients": [
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de poulet"
+        },
+        {
+          "key": "carottes",
+          "name": "Carottes",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "400 g de carottes en tronçons"
+        },
+        {
+          "key": "olives-vertes",
+          "name": "Olives vertes dénoyautées",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "100 g d'olives vertes"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        },
+        {
+          "key": "semoule-ble",
+          "name": "Semoule de blé",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "250 g de semoule de blé"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-saucisses-toulouse-lentilles",
+      "name": "Saucisses de Toulouse aux lentilles (Cookeo)",
+      "category": "B",
+      "score": 75,
+      "proteinLevel": "Très élevé (39g/pers.)",
+      "fatSugarNote": "Lentilles (IG bas & fibres) • Saucisses grillées",
+      "nutritionHighlight": "4 saucisses de Toulouse, 400g de lentilles & carottes",
+      "rawDescription": "4 saucisses de Toulouse (~500 g) + 400 g de lentilles vertes + 300 g de carottes + 1 oignon + 1 cube de bouillon",
+      "ingredients": [
+        {
+          "key": "saucisses-toulouse",
+          "name": "Saucisses de Toulouse",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "4 saucisses de Toulouse (~500 g)"
+        },
+        {
+          "key": "lentilles-vertes",
+          "name": "Lentilles vertes",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "400 g de lentilles vertes"
+        },
+        {
+          "key": "carottes",
+          "name": "Carottes",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "300 g de carottes en rondelles"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-paella-poulet-chorizo",
+      "name": "Paella express poulet & chorizo (Cookeo)",
+      "category": "B",
+      "score": 74,
+      "proteinLevel": "Très élevé (38g/pers.)",
+      "fatSugarNote": "Sans fruits de mer ni poivron • Protéines élevées",
+      "nutritionHighlight": "450g de poulet, 120g de chorizo, petits pois & riz",
+      "rawDescription": "450 g de filets de poulet + 120 g de chorizo + 300 g de riz + 200 g de petits pois + 1 oignon + 1 cube de bouillon + curcuma/épices paella",
+      "ingredients": [
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 450,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "450 g de filets de poulet en cubes"
+        },
+        {
+          "key": "chorizo",
+          "name": "Chorizo en tranches",
+          "qty": 120,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "120 g de chorizo"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de riz"
+        },
+        {
+          "key": "petits-pois",
+          "name": "Petits pois cuits",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "200 g de petits pois"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-poulet-creme-citron-tagliatelles",
+      "name": "Poulet crème, citron & tagliatelles one-pot (Cookeo)",
+      "category": "B",
+      "score": 75,
+      "proteinLevel": "Très élevé (41g/pers.)",
+      "fatSugarNote": "Volaille maigre • Sauce citronnée légère",
+      "nutritionHighlight": "500g de poulet, tagliatelles, citron & touche de crème",
+      "rawDescription": "500 g de filets de poulet + 350 g de tagliatelles + 15 cl de crème liquide + 1 citron jaune + 1 cube de bouillon",
+      "ingredients": [
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "500 g de filets de poulet en lamelles"
+        },
+        {
+          "key": "tagliatelles",
+          "name": "Tagliatelles",
+          "qty": 350,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "350 g de tagliatelles"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 15,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "15 cl de crème liquide"
+        },
+        {
+          "key": "citron",
+          "name": "Citron jaune",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 citron jaune (jus)"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-dahl-lentilles-corail-epinards",
+      "name": "Dahl de lentilles corail & épinards (Cookeo)",
+      "category": "A",
+      "score": 91,
+      "proteinLevel": "Bon (24g/pers.)",
+      "fatSugarNote": "100% végétal • Très riche en fibres & fer",
+      "nutritionHighlight": "300g de lentilles corail, épinards, tomates & lait de coco",
+      "rawDescription": "300 g de lentilles corail + 300 g d'épinards + 400 g de tomates concassées + 200 ml de lait de coco + 1 oignon + 250 g de riz basmati",
+      "ingredients": [
+        {
+          "key": "lentilles-corail",
+          "name": "Lentilles corail",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de lentilles corail"
+        },
+        {
+          "key": "epinards",
+          "name": "Épinards frais ou surgelés",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "300 g d'épinards"
+        },
+        {
+          "key": "tomates-concassees",
+          "name": "Tomates concassées (boîte)",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "1 boîte de tomates concassées (400 g)"
+        },
+        {
+          "key": "lait-coco",
+          "name": "Lait de coco",
+          "qty": 200,
+          "unit": "ml",
+          "aisle": "Épicerie Salée",
+          "detail": "200 ml de lait de coco"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "250 g de riz basmati"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-boeuf-carottes-pommes-de-terre",
+      "name": "Bœuf aux carottes & pommes de terre (Cookeo)",
+      "category": "A",
+      "score": 85,
+      "proteinLevel": "Très élevé (40g/pers.)",
+      "fatSugarNote": "Plat complet mijoté • Gras très bas",
+      "nutritionHighlight": "600g de bœuf, 500g de carottes & 500g de pommes de terre",
+      "rawDescription": "600 g de bœuf à braiser + 500 g de carottes + 500 g de pommes de terre + 1 oignon + 1 cube de bouillon",
+      "ingredients": [
+        {
+          "key": "boeuf-braiser",
+          "name": "Bœuf à braiser (bourguignon)",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de bœuf à braiser"
+        },
+        {
+          "key": "carottes",
+          "name": "Carottes",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "500 g de carottes en rondelles"
+        },
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "500 g de pommes de terre en morceaux"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-one-pot-chorizo-tomates-mozzarella",
+      "name": "Pâtes one-pot chorizo, tomates & mozzarella (Cookeo)",
+      "category": "C",
+      "score": 58,
+      "proteinLevel": "Bon (25g/pers.)",
+      "fatSugarNote": "Chorizo + mozzarella • Express 6 min",
+      "nutritionHighlight": "Penne, 150g de chorizo, tomates & billes de mozzarella",
+      "rawDescription": "350 g de penne + 150 g de chorizo + 400 g de coulis de tomate + 150 g de mozzarella (billes ou râpée) + 1 cube de bouillon",
+      "ingredients": [
+        {
+          "key": "pates-courtes",
+          "name": "Pâtes (macaroni ou penne)",
+          "qty": 350,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "350 g de penne"
+        },
+        {
+          "key": "chorizo",
+          "name": "Chorizo en tranches",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "150 g de chorizo en rondelles"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "400 g de coulis de tomate"
+        },
+        {
+          "key": "mozzarella",
+          "name": "Mozzarella",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "150 g de mozzarella"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-saute-veau-tomate-olives",
+      "name": "Sauté de veau à la tomate & olives (Cookeo)",
+      "category": "A",
+      "score": 83,
+      "proteinLevel": "Très élevé (41g/pers.)",
+      "fatSugarNote": "Viande maigre fondante • Sauce tomate légère",
+      "nutritionHighlight": "600g de sauté de veau, coulis de tomate & olives",
+      "rawDescription": "600 g de sauté de veau + 400 g de coulis de tomate + 100 g d'olives vertes + 1 oignon + 250 g de riz (ou pâtes)",
+      "ingredients": [
+        {
+          "key": "saute-veau",
+          "name": "Sauté de veau",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de sauté de veau"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "400 g de coulis de tomate"
+        },
+        {
+          "key": "olives-vertes",
+          "name": "Olives vertes dénoyautées",
+          "qty": 100,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "100 g d'olives vertes"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "250 g de riz d'accompagnement"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-poulet-miel-soja-riz",
+      "name": "Poulet miel-soja & riz basmati (Cookeo)",
+      "category": "A",
+      "score": 80,
+      "proteinLevel": "Très élevé (42g/pers.)",
+      "fatSugarNote": "Volaille maigre • Touche de miel modérée",
+      "nutritionHighlight": "600g de filets de poulet laqués & riz basmati",
+      "rawDescription": "600 g de filets de poulet + 300 g de riz basmati + 3 c. à soupe de sauce soja + 2 c. à soupe de miel + 1 oignon + 1 cube de bouillon",
+      "ingredients": [
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de filets de poulet en dés"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de riz basmati"
+        },
+        {
+          "key": "sauce-soja",
+          "name": "Sauce soja",
+          "qty": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie Salée",
+          "detail": "3 c. à soupe de sauce soja"
+        },
+        {
+          "key": "miel",
+          "name": "Miel",
+          "qty": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie Sucrée",
+          "detail": "2 c. à soupe de miel"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-quinoa-poulet-petits-pois-mais",
+      "name": "Quinoa façon paella poulet, petits pois & maïs (Cookeo)",
+      "category": "A",
+      "score": 88,
+      "proteinLevel": "Très élevé (41g/pers.)",
+      "fatSugarNote": "Quinoa (IG bas & protéines complètes) + légumes",
+      "nutritionHighlight": "250g de quinoa, 450g de poulet, petits pois & maïs",
+      "rawDescription": "250 g de quinoa + 450 g de filets de poulet + 200 g de petits pois + 150 g de maïs + 1 oignon + 1 cube de bouillon",
+      "ingredients": [
+        {
+          "key": "quinoa",
+          "name": "Quinoa",
+          "qty": 250,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "250 g de quinoa"
+        },
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 450,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "450 g de filets de poulet en dés"
+        },
+        {
+          "key": "petits-pois",
+          "name": "Petits pois cuits",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "200 g de petits pois"
+        },
+        {
+          "key": "mais",
+          "name": "Maïs en boîte",
+          "qty": 150,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "150 g de maïs"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-pommes-de-terre-lardons-haricots-verts",
+      "name": "Pommes de terre, lardons & haricots verts (Cookeo)",
+      "category": "B",
+      "score": 69,
+      "proteinLevel": "Modéré (18g/pers.)",
+      "fatSugarNote": "500g de haricots verts • Lipides des lardons",
+      "nutritionHighlight": "600g de pommes de terre, 500g de haricots verts & lardons",
+      "rawDescription": "600 g de pommes de terre + 500 g de haricots verts + 200 g de lardons + 1 oignon + 1 cube de bouillon",
+      "ingredients": [
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "600 g de pommes de terre en cubes"
+        },
+        {
+          "key": "haricots-verts",
+          "name": "Haricots verts cuits",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "500 g de haricots verts"
+        },
+        {
+          "key": "lardons",
+          "name": "Lardons",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Charcuterie & Traiteur",
+          "detail": "200 g de lardons"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-poulet-tikka-masala",
+      "name": "Poulet tikka masala express & riz (Cookeo)",
+      "category": "A",
+      "score": 81,
+      "proteinLevel": "Très élevé (42g/pers.)",
+      "fatSugarNote": "Protéines maigres • Sauce tomate épicée légère",
+      "nutritionHighlight": "600g de poulet, coulis de tomate, yaourt/crème & riz",
+      "rawDescription": "600 g de filets de poulet + 300 g de coulis de tomate + 10 cl de crème liquide (ou 1 yaourt nature) + 2 c. à soupe d'épices tikka masala + 300 g de riz basmati",
+      "ingredients": [
+        {
+          "key": "poulet-filets",
+          "name": "Aiguillettes ou filets de poulet",
+          "qty": 600,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "600 g de filets de poulet en cubes"
+        },
+        {
+          "key": "coulis-tomate",
+          "name": "Coulis de tomate",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de coulis de tomate"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 10,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "10 cl de crème liquide"
+        },
+        {
+          "key": "epices-tikka",
+          "name": "Épices tikka masala",
+          "qty": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie Salée",
+          "detail": "2 c. à soupe d'épices tikka masala"
+        },
+        {
+          "key": "riz",
+          "name": "Riz (blanc ou basmati)",
+          "qty": 300,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "300 g de riz basmati"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-dinde-paprika-coquillettes",
+      "name": "Émincé de dinde paprika & coquillettes one-pot (Cookeo)",
+      "category": "B",
+      "score": 76,
+      "proteinLevel": "Très élevé (41g/pers.)",
+      "fatSugarNote": "Viande blanche très maigre • Express tout-en-un",
+      "nutritionHighlight": "500g de dinde, coquillettes, paprika & touche de crème",
+      "rawDescription": "500 g d'escalopes ou filets de dinde + 350 g de coquillettes + 15 cl de crème liquide + 1 oignon + 1 cube de bouillon + 1 c. à soupe de paprika doux",
+      "ingredients": [
+        {
+          "key": "saute-dinde",
+          "name": "Sauté ou filets de dinde",
+          "qty": 500,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "500 g de dinde émincée"
+        },
+        {
+          "key": "pates-courtes",
+          "name": "Pâtes (macaroni ou penne)",
+          "qty": 350,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "350 g de coquillettes"
+        },
+        {
+          "key": "creme-liquide",
+          "name": "Crème liquide / fraîche",
+          "qty": 15,
+          "unit": "cl",
+          "aisle": "Crèmerie & Fromages",
+          "detail": "15 cl de crème liquide"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
+        }
+      ]
+    },
+    {
+      "id": "cookeo-jardiniere-legumes-saucisses",
+      "name": "Jardinière de légumes & saucisses fumées (Cookeo)",
+      "category": "B",
+      "score": 72,
+      "proteinLevel": "Bon (26g/pers.)",
+      "fatSugarNote": "Trio de légumes (800g) • Saucisses fumées",
+      "nutritionHighlight": "Carottes, petits pois, pommes de terre & 4 saucisses",
+      "rawDescription": "4 saucisses fumées (~450 g) + 400 g de carottes + 400 g de pommes de terre + 200 g de petits pois + 1 oignon + 1 cube de bouillon",
+      "ingredients": [
+        {
+          "key": "saucisses-fumees",
+          "name": "Saucisses fumées",
+          "qty": 450,
+          "unit": "g",
+          "aisle": "Boucherie & Volaille",
+          "detail": "4 saucisses fumées (~450 g)"
+        },
+        {
+          "key": "carottes",
+          "name": "Carottes",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "400 g de carottes en rondelles"
+        },
+        {
+          "key": "pommes-de-terre",
+          "name": "Pommes de terre",
+          "qty": 400,
+          "unit": "g",
+          "aisle": "Fruits & Légumes",
+          "detail": "400 g de pommes de terre en cubes"
+        },
+        {
+          "key": "petits-pois",
+          "name": "Petits pois cuits",
+          "qty": 200,
+          "unit": "g",
+          "aisle": "Épicerie Salée",
+          "detail": "200 g de petits pois"
+        },
+        {
+          "key": "oignon",
+          "name": "Oignon",
+          "qty": 1,
+          "unit": "pièce",
+          "aisle": "Fruits & Légumes",
+          "detail": "1 oignon"
+        },
+        {
+          "key": "bouillon-legumes",
+          "name": "Bouillon de légumes",
+          "qty": 1,
+          "unit": "cube",
+          "aisle": "Épicerie Salée",
+          "detail": "1 cube de bouillon"
         }
       ]
     }

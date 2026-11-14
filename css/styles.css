@@ -77,6 +77,16 @@ p {
   margin: 0;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+@media (display-mode: standalone), (display-mode: fullscreen), (display-mode: minimal-ui) {
+  #btn-install-app {
+    display: none !important;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
