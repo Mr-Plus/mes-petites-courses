@@ -3,6 +3,13 @@
  * Toutes les recettes sont chargées depuis `./data/recipes.json`.
  */
 
+import {
+  generateMenuPdfBytes,
+  generateShoppingListPdfBytes,
+  isIosOrStandaloneWebApp,
+  shareOrOpenPdfBytes
+} from "./pdf-print.js";
+
 export const CATEGORIES_META = {
   A: {
     code: "A",
@@ -945,6 +952,18 @@ function initEventListeners() {
     if (dom.printDocumentTitle) {
       dom.printDocumentTitle.textContent = "Liste de Courses de la Semaine (par rayon)";
     }
+    if (isIosOrStandaloneWebApp()) {
+      const dateStr = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" }).format(new Date());
+      const pdfBytes = generateShoppingListPdfBytes({
+        aggregatedIngredients: aggregateIngredients(),
+        checkedIngredients: state.checkedIngredients,
+        selectedMealsCount: state.selectedDishIds.size,
+        formatQuantity,
+        dateStr
+      });
+      shareOrOpenPdfBytes(pdfBytes, "Liste-de-Courses.pdf", "Liste de Courses de la Semaine");
+      return;
+    }
     window.print();
   });
 
@@ -953,6 +972,22 @@ function initEventListeners() {
     document.body.dataset.printMode = "menu";
     if (dom.printDocumentTitle) {
       dom.printDocumentTitle.textContent = "Menu de la Semaine & Fiches Ingrédients";
+    }
+    if (isIosOrStandaloneWebApp()) {
+      const catRank = { A: 1, B: 2, C: 3, D: 4 };
+      const selectedDishes = Array.from(state.selectedDishIds)
+        .map((id) => state.dishes.find((d) => d.id === id))
+        .filter(Boolean)
+        .sort((a, b) => (catRank[a.category] || 99) - (catRank[b.category] || 99) || b.score - a.score);
+      const dateStr = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" }).format(new Date());
+      const pdfBytes = generateMenuPdfBytes({
+        selectedDishes,
+        preparedDishIds: state.preparedDishIds,
+        totalIngredientsCount: aggregateIngredients().length,
+        dateStr
+      });
+      shareOrOpenPdfBytes(pdfBytes, "Menu-de-la-Semaine.pdf", "Menu de la Semaine & Fiches Ingrédients");
+      return;
     }
     window.print();
   });
