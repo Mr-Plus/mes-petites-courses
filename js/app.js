@@ -516,6 +516,41 @@ function renderCatalog() {
   dom.dishesCategoriesContainer.innerHTML = html;
 }
 
+const MIN_PRINT_MEAL_SLOTS = 8;
+
+function buildBlankMealCardsHtml(blankCount) {
+  if (blankCount <= 0) return "";
+  const cards = Array.from({ length: blankCount }, () => `
+    <li class="selected-meal-item is-blank-meal print-only" aria-hidden="true">
+      <div class="selected-meal-top">
+        <div class="meal-prepared-label">
+          <input type="checkbox" class="meal-prepared-checkbox print-only" tabindex="-1">
+          <span class="quota-cat-tag quota-cat-blank print-only">&nbsp;</span>
+          <span class="selected-meal-name blank-meal-title-line"></span>
+        </div>
+      </div>
+      <div class="meal-expiry-row print-only">
+        <span class="meal-expiry-label">À cuisiner avant le :</span>
+        <span class="meal-expiry-slots">__ / __ / __</span>
+      </div>
+      <ul class="selected-meal-ingredients print-only">
+        <li><span class="blank-ingredient-line"></span></li>
+        <li><span class="blank-ingredient-line"></span></li>
+        <li><span class="blank-ingredient-line"></span></li>
+        <li><span class="blank-ingredient-line"></span></li>
+      </ul>
+    </li>
+  `).join("");
+
+  return `
+    <div class="meal-category-group print-only" aria-hidden="true">
+      <ul class="aisle-items-list">
+        ${cards}
+      </ul>
+    </div>
+  `;
+}
+
 /**
  * Rendu du contenu de la Popup Liste de Courses & Ingrédients avec info-bulles (`popover="hint"` + `interestfor`)
  */
@@ -529,13 +564,15 @@ function renderShoppingPopupContent() {
 
   dom.selectedMealsCount.textContent = `${selectedDishes.length} plat${selectedDishes.length > 1 ? "s" : ""}`;
   dom.btnClearSelection.hidden = selectedDishes.length === 0;
+  const blankSlotsNeeded = Math.max(0, MIN_PRINT_MEAL_SLOTS - selectedDishes.length);
 
   if (selectedDishes.length === 0) {
     dom.shoppingStatusSubtitle.textContent = "Aucun plat sélectionné. Fermez cette fenêtre et cliquez sur des plats pour composer votre semaine.";
     dom.selectedMealsList.innerHTML = `
-      <div class="empty-state-box">
+      <div class="empty-state-box no-print">
         Aucun plat sélectionné pour le moment.
       </div>
+      ${buildBlankMealCardsHtml(blankSlotsNeeded)}
     `;
     dom.ingredientsTotalCount.textContent = "0 article";
     dom.ingredientsListContainer.innerHTML = `
@@ -552,63 +589,64 @@ function renderShoppingPopupContent() {
   dom.shoppingStatusSubtitle.textContent = `${selectedDishes.length} repas sélectionnés • ${aggregated.length} ingrédients agrégés par rayon.`;
 
   // Liste des plats retenus classés par catégorie nutritionnelle (A -> B -> C -> D)
-  // Sur écran : liste épurée par catégorie ; à l'impression PDF : cartes complètes avec case à cocher, badge catégorie et ingrédients détaillés
-  dom.selectedMealsList.innerHTML = catOrder
-    .map((catCode) => {
-      const dishesOfCat = selectedDishes.filter((d) => d.category === catCode);
-      if (dishesOfCat.length === 0) return "";
-      const meta = CATEGORIES_META[catCode];
+  // Sur écran : liste épurée par catégorie ; à l'impression PDF : cartes complètes (complétées jusqu'à 8 cases avec des fiches vierges)
+  dom.selectedMealsList.innerHTML =
+    catOrder
+      .map((catCode) => {
+        const dishesOfCat = selectedDishes.filter((d) => d.category === catCode);
+        if (dishesOfCat.length === 0) return "";
+        const meta = CATEGORIES_META[catCode];
 
-      return `
-        <div class="meal-category-group">
-          <h4 class="aisle-group-title meal-cat-group-title no-print">
-            <span class="nutri-grade-circle nutri-grade-xs ${meta.badgeClass}" aria-hidden="true">${catCode}</span>
-            <span>${meta.title}</span>
-          </h4>
-          <ul class="aisle-items-list">
-            ${dishesOfCat
-              .map((dish) => {
-                const isPrepared = state.preparedDishIds.has(dish.id);
-                return `
-                  <li class="selected-meal-item ${isPrepared ? "is-prepared" : ""}">
-                    <div class="selected-meal-top">
-                      <label class="meal-prepared-label">
-                        <input
-                          type="checkbox"
-                          class="meal-prepared-checkbox print-only"
-                          data-prepared-dish="${dish.id}"
-                          ${isPrepared ? "checked" : ""}
+        return `
+          <div class="meal-category-group">
+            <h4 class="aisle-group-title meal-cat-group-title no-print">
+              <span class="nutri-grade-circle nutri-grade-xs ${meta.badgeClass}" aria-hidden="true">${catCode}</span>
+              <span>${meta.title}</span>
+            </h4>
+            <ul class="aisle-items-list">
+              ${dishesOfCat
+                .map((dish) => {
+                  const isPrepared = state.preparedDishIds.has(dish.id);
+                  return `
+                    <li class="selected-meal-item ${isPrepared ? "is-prepared" : ""}">
+                      <div class="selected-meal-top">
+                        <label class="meal-prepared-label">
+                          <input
+                            type="checkbox"
+                            class="meal-prepared-checkbox print-only"
+                            data-prepared-dish="${dish.id}"
+                            ${isPrepared ? "checked" : ""}
+                          >
+                          <span class="quota-cat-tag ${meta.quotaTagClass} print-only">${dish.category}</span>
+                          <span class="selected-meal-name">${dish.name}</span>
+                        </label>
+                        <button
+                          type="button"
+                          class="btn-remove-meal no-print"
+                          data-remove-dish="${dish.id}"
+                          aria-label="Retirer ${dish.name} du menu"
                         >
-                        <span class="quota-cat-tag ${meta.quotaTagClass} print-only">${dish.category}</span>
-                        <span class="selected-meal-name">${dish.name}</span>
-                      </label>
-                      <button
-                        type="button"
-                        class="btn-remove-meal no-print"
-                        data-remove-dish="${dish.id}"
-                        aria-label="Retirer ${dish.name} du menu"
-                      >
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-xs" aria-hidden="true">
-                          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="meal-expiry-row print-only">
-                      <span class="meal-expiry-label">À cuisiner avant le :</span>
-                      <span class="meal-expiry-slots">__ / __ / __</span>
-                    </div>
-                    <ul class="selected-meal-ingredients print-only">
-                      ${dish.ingredients.map((ing) => `<li>${ing.detail}</li>`).join("")}
-                    </ul>
-                  </li>
-                `;
-              })
-              .join("")}
-          </ul>
-        </div>
-      `;
-    })
-    .join("");
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-xs" aria-hidden="true">
+                            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="meal-expiry-row print-only">
+                        <span class="meal-expiry-label">À cuisiner avant le :</span>
+                        <span class="meal-expiry-slots">__ / __ / __</span>
+                      </div>
+                      <ul class="selected-meal-ingredients print-only">
+                        ${dish.ingredients.map((ing) => `<li>${ing.detail}</li>`).join("")}
+                      </ul>
+                    </li>
+                  `;
+                })
+                .join("")}
+            </ul>
+          </div>
+        `;
+      })
+      .join("") + buildBlankMealCardsHtml(blankSlotsNeeded);
 
   // Agrégation des ingrédients par rayon
   dom.ingredientsTotalCount.textContent = `${aggregated.length} ingrédient${aggregated.length > 1 ? "s" : ""}`;

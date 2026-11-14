@@ -1397,6 +1397,33 @@ dialog::backdrop {
     margin-bottom: 0.15rem;
   }
 
+  /* Cases vierges (jusqu'à 8 emplacements) pour saisie manuscrite à l'impression */
+  .quota-cat-blank {
+    min-width: 24px;
+    min-height: 22px;
+    border: 1px dashed #666 !important;
+    background: #FFFFFF !important;
+  }
+
+  .blank-meal-title-line {
+    display: inline-block;
+    flex: 1;
+    min-height: 1.25rem;
+    border-bottom: 1px dotted #555;
+  }
+
+  .is-blank-meal .selected-meal-ingredients li {
+    margin-bottom: 0.35rem;
+  }
+
+  .blank-ingredient-line {
+    display: inline-block;
+    width: 100%;
+    height: 1rem;
+    border-bottom: 1px dotted #888;
+    vertical-align: bottom;
+  }
+
   .ingredients-groups {
     max-height: none !important;
     overflow: visible !important;
